@@ -1,0 +1,3454 @@
+{
+  "schema": 1,
+  "profile": "billow-public-preview-2026-10",
+  "generatedDoc": "docs/compatibility/FEATURES.md",
+  "statusDefinitions": {
+    "supported": "Available in the documented public profile without a material Billow-specific limitation for the named concept.",
+    "supported_with_limits": "Available, but Billow intentionally supports a bounded subset or documented divergence.",
+    "experimental": "Implemented or under active integration; public shape/availability may change before certification.",
+    "unsupported": "Not available in the current profile; future support is not committed.",
+    "intentionally_unsupported": "Deliberately excluded from the Billow public model/security boundary.",
+    "billow_extension": "Billow-native capability with no standards-equivalence claim.",
+    "deprecated": "Legacy/superseded vocabulary retained for migration/history.",
+    "planned": "Intended direction without a current implementation claim."
+  },
+  "resources": {
+    "mdn-html-elements": {
+      "label": "MDN HTML elements",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements"
+    },
+    "mdn-css-reference": {
+      "label": "MDN CSS reference",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Reference"
+    },
+    "mdn-css-selectors": {
+      "label": "MDN CSS selectors",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_selectors"
+    },
+    "mdn-web-api": {
+      "label": "MDN Web APIs",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/API"
+    },
+    "mdn-fetch": {
+      "label": "MDN Fetch API",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API"
+    },
+    "mdn-forms": {
+      "label": "MDN web forms",
+      "url": "https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Forms"
+    },
+    "typescript-docs": {
+      "label": "TypeScript documentation",
+      "url": "https://www.typescriptlang.org/docs/"
+    },
+    "javascript-mdn": {
+      "label": "MDN JavaScript",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript"
+    },
+    "luau-docs": {
+      "label": "Luau documentation",
+      "url": "https://luau.org/"
+    },
+    "uri-rfc3986": {
+      "label": "RFC 3986 URI syntax",
+      "url": "https://www.rfc-editor.org/rfc/rfc3986"
+    }
+  },
+  "features": [
+    {
+      "id": "html.element.body",
+      "area": "html",
+      "kind": "element",
+      "external": "<body>",
+      "billow": "<body>",
+      "status": "supported_with_limits",
+      "summary": "HTML <body> is accepted by the current Billow document profile.",
+      "restrictions": "Supported by the bounded Billow HTML document profile; full browser behavior is not implied.",
+      "searchTerms": [
+        "body",
+        "HTML body"
+      ],
+      "verification": [
+        {
+          "kind": "implementation-contract",
+          "id": "HTML.PolicyV2.Element.body"
+        }
+      ],
+      "docs": "docs/web/HTML.md",
+      "upstream": "mdn-html-elements"
+    },
+    {
+      "id": "html.element.main",
+      "area": "html",
+      "kind": "element",
+      "external": "<main>",
+      "billow": "<main>",
+      "status": "supported_with_limits",
+      "summary": "HTML <main> is accepted by the current Billow document profile.",
+      "restrictions": "Supported by the bounded Billow HTML document profile; full browser behavior is not implied.",
+      "searchTerms": [
+        "main",
+        "HTML main"
+      ],
+      "verification": [
+        {
+          "kind": "implementation-contract",
+          "id": "HTML.PolicyV2.Element.main"
+        }
+      ],
+      "docs": "docs/web/HTML.md",
+      "upstream": "mdn-html-elements"
+    },
+    {
+      "id": "html.element.header",
+      "area": "html",
+      "kind": "element",
+      "external": "<header>",
+      "billow": "<header>",
+      "status": "supported_with_limits",
+      "summary": "HTML <header> is accepted by the current Billow document profile.",
+      "restrictions": "Supported by the bounded Billow HTML document profile; full browser behavior is not implied.",
+      "searchTerms": [
+        "header",
+        "HTML header"
+      ],
+      "verification": [
+        {
+          "kind": "implementation-contract",
+          "id": "HTML.PolicyV2.Element.header"
+        }
+      ],
+      "docs": "docs/web/HTML.md",
+      "upstream": "mdn-html-elements"
+    },
+    {
+      "id": "html.element.footer",
+      "area": "html",
+      "kind": "element",
+      "external": "<footer>",
+      "billow": "<footer>",
+      "status": "supported_with_limits",
+      "summary": "HTML <footer> is accepted by the current Billow document profile.",
+      "restrictions": "Supported by the bounded Billow HTML document profile; full browser behavior is not implied.",
+      "searchTerms": [
+        "footer",
+        "HTML footer"
+      ],
+      "verification": [
+        {
+          "kind": "implementation-contract",
+          "id": "HTML.PolicyV2.Element.footer"
+        }
+      ],
+      "docs": "docs/web/HTML.md",
+      "upstream": "mdn-html-elements"
+    },
+    {
+      "id": "html.element.nav",
+      "area": "html",
+      "kind": "element",
+      "external": "<nav>",
+      "billow": "<nav>",
+      "status": "supported_with_limits",
+      "summary": "HTML <nav> is accepted by the current Billow document profile.",
+      "restrictions": "Supported by the bounded Billow HTML document profile; full browser behavior is not implied.",
+      "searchTerms": [
+        "nav",
+        "HTML nav"
+      ],
+      "verification": [
+        {
+          "kind": "implementation-contract",
+          "id": "HTML.PolicyV2.Element.nav"
+        }
+      ],
+      "docs": "docs/web/HTML.md",
+      "upstream": "mdn-html-elements"
+    },
+    {
+      "id": "html.element.section",
+      "area": "html",
+      "kind": "element",
+      "external": "<section>",
+      "billow": "<section>",
+      "status": "supported_with_limits",
+      "summary": "HTML <section> is accepted by the current Billow document profile.",
+      "restrictions": "Supported by the bounded Billow HTML document profile; full browser behavior is not implied.",
+      "searchTerms": [
+        "section",
+        "HTML section"
+      ],
+      "verification": [
+        {
+          "kind": "implementation-contract",
+          "id": "HTML.PolicyV2.Element.section"
+        }
+      ],
+      "docs": "docs/web/HTML.md",
+      "upstream": "mdn-html-elements"
+    },
+    {
+      "id": "html.element.article",
+      "area": "html",
+      "kind": "element",
+      "external": "<article>",
+      "billow": "<article>",
+      "status": "supported_with_limits",
+      "summary": "HTML <article> is accepted by the current Billow document profile.",
+      "restrictions": "Supported by the bounded Billow HTML document profile; full browser behavior is not implied.",
+      "searchTerms": [
+        "article",
+        "HTML article"
+      ],
+      "verification": [
+        {
+          "kind": "implementation-contract",
+          "id": "HTML.PolicyV2.Element.article"
+        }
+      ],
+      "docs": "docs/web/HTML.md",
+      "upstream": "mdn-html-elements"
+    },
+    {
+      "id": "html.element.aside",
+      "area": "html",
+      "kind": "element",
+      "external": "<aside>",
+      "billow": "<aside>",
+      "status": "supported_with_limits",
+      "summary": "HTML <aside> is accepted by the current Billow document profile.",
+      "restrictions": "Supported by the bounded Billow HTML document profile; full browser behavior is not implied.",
+      "searchTerms": [
+        "aside",
+        "HTML aside"
+      ],
+      "verification": [
+        {
+          "kind": "implementation-contract",
+          "id": "HTML.PolicyV2.Element.aside"
+        }
+      ],
+      "docs": "docs/web/HTML.md",
+      "upstream": "mdn-html-elements"
+    },
+    {
+      "id": "html.element.div",
+      "area": "html",
+      "kind": "element",
+      "external": "<div>",
+      "billow": "<div>",
+      "status": "supported_with_limits",
+      "summary": "HTML <div> is accepted by the current Billow document profile.",
+      "restrictions": "Supported by the bounded Billow HTML document profile; full browser behavior is not implied.",
+      "searchTerms": [
+        "div",
+        "HTML div"
+      ],
+      "verification": [
+        {
+          "kind": "implementation-contract",
+          "id": "HTML.PolicyV2.Element.div"
+        }
+      ],
+      "docs": "docs/web/HTML.md",
+      "upstream": "mdn-html-elements"
+    },
+    {
+      "id": "html.element.blockquote",
+      "area": "html",
+      "kind": "element",
+      "external": "<blockquote>",
+      "billow": "<blockquote>",
+      "status": "supported_with_limits",
+      "summary": "HTML <blockquote> is accepted by the current Billow document profile.",
+      "restrictions": "Supported by the bounded Billow HTML document profile; full browser behavior is not implied.",
+      "searchTerms": [
+        "blockquote",
+        "HTML blockquote"
+      ],
+      "verification": [
+        {
+          "kind": "implementation-contract",
+          "id": "HTML.PolicyV2.Element.blockquote"
+        }
+      ],
+      "docs": "docs/web/HTML.md",
+      "upstream": "mdn-html-elements"
+    },
+    {
+      "id": "html.element.figure",
+      "area": "html",
+      "kind": "element",
+      "external": "<figure>",
+      "billow": "<figure>",
+      "status": "supported_with_limits",
+      "summary": "HTML <figure> is accepted by the current Billow document profile.",
+      "restrictions": "Supported by the bounded Billow HTML document profile; full browser behavior is not implied.",
+      "searchTerms": [
+        "figure",
+        "HTML figure"
+      ],
+      "verification": [
+        {
+          "kind": "implementation-contract",
+          "id": "HTML.PolicyV2.Element.figure"
+        }
+      ],
+      "docs": "docs/web/HTML.md",
+      "upstream": "mdn-html-elements"
+    },
+    {
+      "id": "html.element.figcaption",
+      "area": "html",
+      "kind": "element",
+      "external": "<figcaption>",
+      "billow": "<figcaption>",
+      "status": "supported_with_limits",
+      "summary": "HTML <figcaption> is accepted by the current Billow document profile.",
+      "restrictions": "Supported by the bounded Billow HTML document profile; full browser behavior is not implied.",
+      "searchTerms": [
+        "figcaption",
+        "HTML figcaption"
+      ],
+      "verification": [
+        {
+          "kind": "implementation-contract",
+          "id": "HTML.PolicyV2.Element.figcaption"
+        }
+      ],
+      "docs": "docs/web/HTML.md",
+      "upstream": "mdn-html-elements"
+    },
+    {
+      "id": "html.element.h1",
+      "area": "html",
+      "kind": "element",
+      "external": "<h1>",
+      "billow": "<h1>",
+      "status": "supported_with_limits",
+      "summary": "HTML <h1> is accepted by the current Billow document profile.",
+      "restrictions": "Supported by the bounded Billow HTML document profile; full browser behavior is not implied.",
+      "searchTerms": [
+        "h1",
+        "HTML h1"
+      ],
+      "verification": [
+        {
+          "kind": "implementation-contract",
+          "id": "HTML.PolicyV2.Element.h1"
+        }
+      ],
+      "docs": "docs/web/HTML.md",
+      "upstream": "mdn-html-elements"
+    },
+    {
+      "id": "html.element.h2",
+      "area": "html",
+      "kind": "element",
+      "external": "<h2>",
+      "billow": "<h2>",
+      "status": "supported_with_limits",
+      "summary": "HTML <h2> is accepted by the current Billow document profile.",
+      "restrictions": "Supported by the bounded Billow HTML document profile; full browser behavior is not implied.",
+      "searchTerms": [
+        "h2",
+        "HTML h2"
+      ],
+      "verification": [
+        {
+          "kind": "implementation-contract",
+          "id": "HTML.PolicyV2.Element.h2"
+        }
+      ],
+      "docs": "docs/web/HTML.md",
+      "upstream": "mdn-html-elements"
+    },
+    {
+      "id": "html.element.h3",
+      "area": "html",
+      "kind": "element",
+      "external": "<h3>",
+      "billow": "<h3>",
+      "status": "supported_with_limits",
+      "summary": "HTML <h3> is accepted by the current Billow document profile.",
+      "restrictions": "Supported by the bounded Billow HTML document profile; full browser behavior is not implied.",
+      "searchTerms": [
+        "h3",
+        "HTML h3"
+      ],
+      "verification": [
+        {
+          "kind": "implementation-contract",
+          "id": "HTML.PolicyV2.Element.h3"
+        }
+      ],
+      "docs": "docs/web/HTML.md",
+      "upstream": "mdn-html-elements"
+    },
+    {
+      "id": "html.element.h4",
+      "area": "html",
+      "kind": "element",
+      "external": "<h4>",
+      "billow": "<h4>",
+      "status": "supported_with_limits",
+      "summary": "HTML <h4> is accepted by the current Billow document profile.",
+      "restrictions": "Supported by the bounded Billow HTML document profile; full browser behavior is not implied.",
+      "searchTerms": [
+        "h4",
+        "HTML h4"
+      ],
+      "verification": [
+        {
+          "kind": "implementation-contract",
+          "id": "HTML.PolicyV2.Element.h4"
+        }
+      ],
+      "docs": "docs/web/HTML.md",
+      "upstream": "mdn-html-elements"
+    },
+    {
+      "id": "html.element.h5",
+      "area": "html",
+      "kind": "element",
+      "external": "<h5>",
+      "billow": "<h5>",
+      "status": "supported_with_limits",
+      "summary": "HTML <h5> is accepted by the current Billow document profile.",
+      "restrictions": "Supported by the bounded Billow HTML document profile; full browser behavior is not implied.",
+      "searchTerms": [
+        "h5",
+        "HTML h5"
+      ],
+      "verification": [
+        {
+          "kind": "implementation-contract",
+          "id": "HTML.PolicyV2.Element.h5"
+        }
+      ],
+      "docs": "docs/web/HTML.md",
+      "upstream": "mdn-html-elements"
+    },
+    {
+      "id": "html.element.h6",
+      "area": "html",
+      "kind": "element",
+      "external": "<h6>",
+      "billow": "<h6>",
+      "status": "supported_with_limits",
+      "summary": "HTML <h6> is accepted by the current Billow document profile.",
+      "restrictions": "Supported by the bounded Billow HTML document profile; full browser behavior is not implied.",
+      "searchTerms": [
+        "h6",
+        "HTML h6"
+      ],
+      "verification": [
+        {
+          "kind": "implementation-contract",
+          "id": "HTML.PolicyV2.Element.h6"
+        }
+      ],
+      "docs": "docs/web/HTML.md",
+      "upstream": "mdn-html-elements"
+    },
+    {
+      "id": "html.element.p",
+      "area": "html",
+      "kind": "element",
+      "external": "<p>",
+      "billow": "<p>",
+      "status": "supported_with_limits",
+      "summary": "HTML <p> is accepted by the current Billow document profile.",
+      "restrictions": "Supported by the bounded Billow HTML document profile; full browser behavior is not implied.",
+      "searchTerms": [
+        "p",
+        "HTML p"
+      ],
+      "verification": [
+        {
+          "kind": "implementation-contract",
+          "id": "HTML.PolicyV2.Element.p"
+        }
+      ],
+      "docs": "docs/web/HTML.md",
+      "upstream": "mdn-html-elements"
+    },
+    {
+      "id": "html.element.span",
+      "area": "html",
+      "kind": "element",
+      "external": "<span>",
+      "billow": "<span>",
+      "status": "supported_with_limits",
+      "summary": "HTML <span> is accepted by the current Billow document profile.",
+      "restrictions": "Supported by the bounded Billow HTML document profile; full browser behavior is not implied.",
+      "searchTerms": [
+        "span",
+        "HTML span"
+      ],
+      "verification": [
+        {
+          "kind": "implementation-contract",
+          "id": "HTML.PolicyV2.Element.span"
+        }
+      ],
+      "docs": "docs/web/HTML.md",
+      "upstream": "mdn-html-elements"
+    },
+    {
+      "id": "html.element.strong",
+      "area": "html",
+      "kind": "element",
+      "external": "<strong>",
+      "billow": "<strong>",
+      "status": "supported_with_limits",
+      "summary": "HTML <strong> is accepted by the current Billow document profile.",
+      "restrictions": "Supported by the bounded Billow HTML document profile; full browser behavior is not implied.",
+      "searchTerms": [
+        "strong",
+        "HTML strong"
+      ],
+      "verification": [
+        {
+          "kind": "implementation-contract",
+          "id": "HTML.PolicyV2.Element.strong"
+        }
+      ],
+      "docs": "docs/web/HTML.md",
+      "upstream": "mdn-html-elements"
+    },
+    {
+      "id": "html.element.em",
+      "area": "html",
+      "kind": "element",
+      "external": "<em>",
+      "billow": "<em>",
+      "status": "supported_with_limits",
+      "summary": "HTML <em> is accepted by the current Billow document profile.",
+      "restrictions": "Supported by the bounded Billow HTML document profile; full browser behavior is not implied.",
+      "searchTerms": [
+        "em",
+        "HTML em"
+      ],
+      "verification": [
+        {
+          "kind": "implementation-contract",
+          "id": "HTML.PolicyV2.Element.em"
+        }
+      ],
+      "docs": "docs/web/HTML.md",
+      "upstream": "mdn-html-elements"
+    },
+    {
+      "id": "html.element.small",
+      "area": "html",
+      "kind": "element",
+      "external": "<small>",
+      "billow": "<small>",
+      "status": "supported_with_limits",
+      "summary": "HTML <small> is accepted by the current Billow document profile.",
+      "restrictions": "Supported by the bounded Billow HTML document profile; full browser behavior is not implied.",
+      "searchTerms": [
+        "small",
+        "HTML small"
+      ],
+      "verification": [
+        {
+          "kind": "implementation-contract",
+          "id": "HTML.PolicyV2.Element.small"
+        }
+      ],
+      "docs": "docs/web/HTML.md",
+      "upstream": "mdn-html-elements"
+    },
+    {
+      "id": "html.element.code",
+      "area": "html",
+      "kind": "element",
+      "external": "<code>",
+      "billow": "<code>",
+      "status": "supported_with_limits",
+      "summary": "HTML <code> is accepted by the current Billow document profile.",
+      "restrictions": "Supported by the bounded Billow HTML document profile; full browser behavior is not implied.",
+      "searchTerms": [
+        "code",
+        "HTML code"
+      ],
+      "verification": [
+        {
+          "kind": "implementation-contract",
+          "id": "HTML.PolicyV2.Element.code"
+        }
+      ],
+      "docs": "docs/web/HTML.md",
+      "upstream": "mdn-html-elements"
+    },
+    {
+      "id": "html.element.mark",
+      "area": "html",
+      "kind": "element",
+      "external": "<mark>",
+      "billow": "<mark>",
+      "status": "supported_with_limits",
+      "summary": "HTML <mark> is accepted by the current Billow document profile.",
+      "restrictions": "Supported by the bounded Billow HTML document profile; full browser behavior is not implied.",
+      "searchTerms": [
+        "mark",
+        "HTML mark"
+      ],
+      "verification": [
+        {
+          "kind": "implementation-contract",
+          "id": "HTML.PolicyV2.Element.mark"
+        }
+      ],
+      "docs": "docs/web/HTML.md",
+      "upstream": "mdn-html-elements"
+    },
+    {
+      "id": "html.element.kbd",
+      "area": "html",
+      "kind": "element",
+      "external": "<kbd>",
+      "billow": "<kbd>",
+      "status": "supported_with_limits",
+      "summary": "HTML <kbd> is accepted by the current Billow document profile.",
+      "restrictions": "Supported by the bounded Billow HTML document profile; full browser behavior is not implied.",
+      "searchTerms": [
+        "kbd",
+        "HTML kbd"
+      ],
+      "verification": [
+        {
+          "kind": "implementation-contract",
+          "id": "HTML.PolicyV2.Element.kbd"
+        }
+      ],
+      "docs": "docs/web/HTML.md",
+      "upstream": "mdn-html-elements"
+    },
+    {
+      "id": "html.element.samp",
+      "area": "html",
+      "kind": "element",
+      "external": "<samp>",
+      "billow": "<samp>",
+      "status": "supported_with_limits",
+      "summary": "HTML <samp> is accepted by the current Billow document profile.",
+      "restrictions": "Supported by the bounded Billow HTML document profile; full browser behavior is not implied.",
+      "searchTerms": [
+        "samp",
+        "HTML samp"
+      ],
+      "verification": [
+        {
+          "kind": "implementation-contract",
+          "id": "HTML.PolicyV2.Element.samp"
+        }
+      ],
+      "docs": "docs/web/HTML.md",
+      "upstream": "mdn-html-elements"
+    },
+    {
+      "id": "html.element.time",
+      "area": "html",
+      "kind": "element",
+      "external": "<time>",
+      "billow": "<time>",
+      "status": "supported_with_limits",
+      "summary": "HTML <time> is accepted by the current Billow document profile.",
+      "restrictions": "Supported by the bounded Billow HTML document profile; full browser behavior is not implied.",
+      "searchTerms": [
+        "time",
+        "HTML time"
+      ],
+      "verification": [
+        {
+          "kind": "implementation-contract",
+          "id": "HTML.PolicyV2.Element.time"
+        }
+      ],
+      "docs": "docs/web/HTML.md",
+      "upstream": "mdn-html-elements"
+    },
+    {
+      "id": "html.element.pre",
+      "area": "html",
+      "kind": "element",
+      "external": "<pre>",
+      "billow": "<pre>",
+      "status": "supported_with_limits",
+      "summary": "HTML <pre> is accepted by the current Billow document profile.",
+      "restrictions": "Supported by the bounded Billow HTML document profile; full browser behavior is not implied.",
+      "searchTerms": [
+        "pre",
+        "HTML pre"
+      ],
+      "verification": [
+        {
+          "kind": "implementation-contract",
+          "id": "HTML.PolicyV2.Element.pre"
+        }
+      ],
+      "docs": "docs/web/HTML.md",
+      "upstream": "mdn-html-elements"
+    },
+    {
+      "id": "html.element.a",
+      "area": "html",
+      "kind": "element",
+      "external": "<a>",
+      "billow": "<a>",
+      "status": "supported_with_limits",
+      "summary": "HTML <a> is accepted by the current Billow document profile.",
+      "restrictions": "Navigation reference must pass Billow navigation policy.",
+      "searchTerms": [
+        "a",
+        "HTML a"
+      ],
+      "verification": [
+        {
+          "kind": "implementation-contract",
+          "id": "HTML.PolicyV2.Element.a"
+        }
+      ],
+      "docs": "docs/web/HTML.md",
+      "upstream": "mdn-html-elements"
+    },
+    {
+      "id": "html.element.img",
+      "area": "html",
+      "kind": "element",
+      "external": "<img>",
+      "billow": "<img>",
+      "status": "supported_with_limits",
+      "summary": "HTML <img> is accepted by the current Billow document profile.",
+      "restrictions": "Requires src and bounded alt text; resource resolution is Billow-controlled.",
+      "searchTerms": [
+        "img",
+        "HTML img"
+      ],
+      "verification": [
+        {
+          "kind": "implementation-contract",
+          "id": "HTML.PolicyV2.Element.img"
+        }
+      ],
+      "docs": "docs/web/HTML.md",
+      "upstream": "mdn-html-elements"
+    },
+    {
+      "id": "html.element.button",
+      "area": "html",
+      "kind": "element",
+      "external": "<button>",
+      "billow": "<button>",
+      "status": "supported_with_limits",
+      "summary": "HTML <button> is accepted by the current Billow document profile.",
+      "restrictions": "Supported by the bounded Billow HTML document profile; full browser behavior is not implied.",
+      "searchTerms": [
+        "button",
+        "HTML button"
+      ],
+      "verification": [
+        {
+          "kind": "implementation-contract",
+          "id": "HTML.PolicyV2.Element.button"
+        }
+      ],
+      "docs": "docs/web/HTML.md",
+      "upstream": "mdn-html-elements"
+    },
+    {
+      "id": "html.element.form",
+      "area": "html",
+      "kind": "element",
+      "external": "<form>",
+      "billow": "<form>",
+      "status": "supported_with_limits",
+      "summary": "HTML <form> is accepted by the current Billow document profile.",
+      "restrictions": "Current form profile is Billow service/action bound and POST-only.",
+      "searchTerms": [
+        "form",
+        "HTML form"
+      ],
+      "verification": [
+        {
+          "kind": "implementation-contract",
+          "id": "HTML.PolicyV2.Element.form"
+        }
+      ],
+      "docs": "docs/web/HTML.md",
+      "upstream": "mdn-html-elements"
+    },
+    {
+      "id": "html.element.label",
+      "area": "html",
+      "kind": "element",
+      "external": "<label>",
+      "billow": "<label>",
+      "status": "supported_with_limits",
+      "summary": "HTML <label> is accepted by the current Billow document profile.",
+      "restrictions": "Supported by the bounded Billow HTML document profile; full browser behavior is not implied.",
+      "searchTerms": [
+        "label",
+        "HTML label"
+      ],
+      "verification": [
+        {
+          "kind": "implementation-contract",
+          "id": "HTML.PolicyV2.Element.label"
+        }
+      ],
+      "docs": "docs/web/HTML.md",
+      "upstream": "mdn-html-elements"
+    },
+    {
+      "id": "html.element.input",
+      "area": "html",
+      "kind": "element",
+      "external": "<input>",
+      "billow": "<input>",
+      "status": "supported_with_limits",
+      "summary": "HTML <input> is accepted by the current Billow document profile.",
+      "restrictions": "Current input types are text and search.",
+      "searchTerms": [
+        "input",
+        "HTML input"
+      ],
+      "verification": [
+        {
+          "kind": "implementation-contract",
+          "id": "HTML.PolicyV2.Element.input"
+        }
+      ],
+      "docs": "docs/web/HTML.md",
+      "upstream": "mdn-html-elements"
+    },
+    {
+      "id": "html.element.textarea",
+      "area": "html",
+      "kind": "element",
+      "external": "<textarea>",
+      "billow": "<textarea>",
+      "status": "supported_with_limits",
+      "summary": "HTML <textarea> is accepted by the current Billow document profile.",
+      "restrictions": "Supported by the bounded Billow HTML document profile; full browser behavior is not implied.",
+      "searchTerms": [
+        "textarea",
+        "HTML textarea"
+      ],
+      "verification": [
+        {
+          "kind": "implementation-contract",
+          "id": "HTML.PolicyV2.Element.textarea"
+        }
+      ],
+      "docs": "docs/web/HTML.md",
+      "upstream": "mdn-html-elements"
+    },
+    {
+      "id": "html.element.ul",
+      "area": "html",
+      "kind": "element",
+      "external": "<ul>",
+      "billow": "<ul>",
+      "status": "supported_with_limits",
+      "summary": "HTML <ul> is accepted by the current Billow document profile.",
+      "restrictions": "Supported by the bounded Billow HTML document profile; full browser behavior is not implied.",
+      "searchTerms": [
+        "ul",
+        "HTML ul"
+      ],
+      "verification": [
+        {
+          "kind": "implementation-contract",
+          "id": "HTML.PolicyV2.Element.ul"
+        }
+      ],
+      "docs": "docs/web/HTML.md",
+      "upstream": "mdn-html-elements"
+    },
+    {
+      "id": "html.element.ol",
+      "area": "html",
+      "kind": "element",
+      "external": "<ol>",
+      "billow": "<ol>",
+      "status": "supported_with_limits",
+      "summary": "HTML <ol> is accepted by the current Billow document profile.",
+      "restrictions": "Supported by the bounded Billow HTML document profile; full browser behavior is not implied.",
+      "searchTerms": [
+        "ol",
+        "HTML ol"
+      ],
+      "verification": [
+        {
+          "kind": "implementation-contract",
+          "id": "HTML.PolicyV2.Element.ol"
+        }
+      ],
+      "docs": "docs/web/HTML.md",
+      "upstream": "mdn-html-elements"
+    },
+    {
+      "id": "html.element.li",
+      "area": "html",
+      "kind": "element",
+      "external": "<li>",
+      "billow": "<li>",
+      "status": "supported_with_limits",
+      "summary": "HTML <li> is accepted by the current Billow document profile.",
+      "restrictions": "Supported by the bounded Billow HTML document profile; full browser behavior is not implied.",
+      "searchTerms": [
+        "li",
+        "HTML li"
+      ],
+      "verification": [
+        {
+          "kind": "implementation-contract",
+          "id": "HTML.PolicyV2.Element.li"
+        }
+      ],
+      "docs": "docs/web/HTML.md",
+      "upstream": "mdn-html-elements"
+    },
+    {
+      "id": "html.element.hr",
+      "area": "html",
+      "kind": "element",
+      "external": "<hr>",
+      "billow": "<hr>",
+      "status": "supported_with_limits",
+      "summary": "HTML <hr> is accepted by the current Billow document profile.",
+      "restrictions": "Supported by the bounded Billow HTML document profile; full browser behavior is not implied.",
+      "searchTerms": [
+        "hr",
+        "HTML hr"
+      ],
+      "verification": [
+        {
+          "kind": "implementation-contract",
+          "id": "HTML.PolicyV2.Element.hr"
+        }
+      ],
+      "docs": "docs/web/HTML.md",
+      "upstream": "mdn-html-elements"
+    },
+    {
+      "id": "html.element.br",
+      "area": "html",
+      "kind": "element",
+      "external": "<br>",
+      "billow": "<br>",
+      "status": "supported_with_limits",
+      "summary": "HTML <br> is accepted by the current Billow document profile.",
+      "restrictions": "Supported by the bounded Billow HTML document profile; full browser behavior is not implied.",
+      "searchTerms": [
+        "br",
+        "HTML br"
+      ],
+      "verification": [
+        {
+          "kind": "implementation-contract",
+          "id": "HTML.PolicyV2.Element.br"
+        }
+      ],
+      "docs": "docs/web/HTML.md",
+      "upstream": "mdn-html-elements"
+    },
+    {
+      "id": "html.element.table",
+      "area": "html",
+      "kind": "element",
+      "external": "<table>",
+      "billow": null,
+      "status": "unsupported",
+      "summary": "HTML <table> is rejected by the current Billow parser/profile.",
+      "restrictions": "No future compatibility commitment is implied.",
+      "searchTerms": [
+        "table",
+        "HTML table"
+      ],
+      "verification": [
+        {
+          "kind": "implementation-contract",
+          "id": "HTML.Syntax.Unsupported.table"
+        }
+      ],
+      "docs": "docs/web/HTML.md",
+      "upstream": "mdn-html-elements"
+    },
+    {
+      "id": "html.element.svg",
+      "area": "html",
+      "kind": "element",
+      "external": "<svg>",
+      "billow": null,
+      "status": "unsupported",
+      "summary": "HTML <svg> is rejected by the current Billow parser/profile.",
+      "restrictions": "No future compatibility commitment is implied.",
+      "searchTerms": [
+        "svg",
+        "HTML svg"
+      ],
+      "verification": [
+        {
+          "kind": "implementation-contract",
+          "id": "HTML.Syntax.Unsupported.svg"
+        }
+      ],
+      "docs": "docs/web/HTML.md",
+      "upstream": "mdn-html-elements"
+    },
+    {
+      "id": "html.element.math",
+      "area": "html",
+      "kind": "element",
+      "external": "<math>",
+      "billow": null,
+      "status": "unsupported",
+      "summary": "HTML <math> is rejected by the current Billow parser/profile.",
+      "restrictions": "No future compatibility commitment is implied.",
+      "searchTerms": [
+        "math",
+        "HTML math"
+      ],
+      "verification": [
+        {
+          "kind": "implementation-contract",
+          "id": "HTML.Syntax.Unsupported.math"
+        }
+      ],
+      "docs": "docs/web/HTML.md",
+      "upstream": "mdn-html-elements"
+    },
+    {
+      "id": "html.element.template",
+      "area": "html",
+      "kind": "element",
+      "external": "<template>",
+      "billow": null,
+      "status": "unsupported",
+      "summary": "HTML <template> is rejected by the current Billow parser/profile.",
+      "restrictions": "No future compatibility commitment is implied.",
+      "searchTerms": [
+        "template",
+        "HTML template"
+      ],
+      "verification": [
+        {
+          "kind": "implementation-contract",
+          "id": "HTML.Syntax.Unsupported.template"
+        }
+      ],
+      "docs": "docs/web/HTML.md",
+      "upstream": "mdn-html-elements"
+    },
+    {
+      "id": "html.element.select",
+      "area": "html",
+      "kind": "element",
+      "external": "<select>",
+      "billow": null,
+      "status": "unsupported",
+      "summary": "HTML <select> is rejected by the current Billow parser/profile.",
+      "restrictions": "No future compatibility commitment is implied.",
+      "searchTerms": [
+        "select",
+        "HTML select"
+      ],
+      "verification": [
+        {
+          "kind": "implementation-contract",
+          "id": "HTML.Syntax.Unsupported.select"
+        }
+      ],
+      "docs": "docs/web/HTML.md",
+      "upstream": "mdn-html-elements"
+    },
+    {
+      "id": "html.element.frameset",
+      "area": "html",
+      "kind": "element",
+      "external": "<frameset>",
+      "billow": null,
+      "status": "unsupported",
+      "summary": "HTML <frameset> is rejected by the current Billow parser/profile.",
+      "restrictions": "No future compatibility commitment is implied.",
+      "searchTerms": [
+        "frameset",
+        "HTML frameset"
+      ],
+      "verification": [
+        {
+          "kind": "implementation-contract",
+          "id": "HTML.Syntax.Unsupported.frameset"
+        }
+      ],
+      "docs": "docs/web/HTML.md",
+      "upstream": "mdn-html-elements"
+    },
+    {
+      "id": "html.element.plaintext",
+      "area": "html",
+      "kind": "element",
+      "external": "<plaintext>",
+      "billow": null,
+      "status": "unsupported",
+      "summary": "HTML <plaintext> is rejected by the current Billow parser/profile.",
+      "restrictions": "No future compatibility commitment is implied.",
+      "searchTerms": [
+        "plaintext",
+        "HTML plaintext"
+      ],
+      "verification": [
+        {
+          "kind": "implementation-contract",
+          "id": "HTML.Syntax.Unsupported.plaintext"
+        }
+      ],
+      "docs": "docs/web/HTML.md",
+      "upstream": "mdn-html-elements"
+    },
+    {
+      "id": "html.element.xmp",
+      "area": "html",
+      "kind": "element",
+      "external": "<xmp>",
+      "billow": null,
+      "status": "unsupported",
+      "summary": "HTML <xmp> is rejected by the current Billow parser/profile.",
+      "restrictions": "No future compatibility commitment is implied.",
+      "searchTerms": [
+        "xmp",
+        "HTML xmp"
+      ],
+      "verification": [
+        {
+          "kind": "implementation-contract",
+          "id": "HTML.Syntax.Unsupported.xmp"
+        }
+      ],
+      "docs": "docs/web/HTML.md",
+      "upstream": "mdn-html-elements"
+    },
+    {
+      "id": "html.element.noscript",
+      "area": "html",
+      "kind": "element",
+      "external": "<noscript>",
+      "billow": null,
+      "status": "unsupported",
+      "summary": "HTML <noscript> is rejected by the current Billow parser/profile.",
+      "restrictions": "No future compatibility commitment is implied.",
+      "searchTerms": [
+        "noscript",
+        "HTML noscript"
+      ],
+      "verification": [
+        {
+          "kind": "implementation-contract",
+          "id": "HTML.Syntax.Unsupported.noscript"
+        }
+      ],
+      "docs": "docs/web/HTML.md",
+      "upstream": "mdn-html-elements"
+    },
+    {
+      "id": "html.element.iframe",
+      "area": "html",
+      "kind": "element",
+      "external": "<iframe>",
+      "billow": null,
+      "status": "intentionally_unsupported",
+      "summary": "Iframe-style arbitrary embedding is outside the public Billow security model.",
+      "restrictions": "No arbitrary embedded external browsing context.",
+      "searchTerms": [
+        "iframe",
+        "embed website"
+      ],
+      "verification": [
+        {
+          "kind": "architecture-contract",
+          "id": "Billow.Web.NoIframeEmbedding"
+        }
+      ],
+      "docs": "docs/web/HTML.md",
+      "upstream": "mdn-html-elements"
+    },
+    {
+      "id": "css.property.display",
+      "area": "css",
+      "kind": "property",
+      "external": "display",
+      "billow": "display",
+      "status": "supported_with_limits",
+      "summary": "CSS display is recognized by Billow CSS profile 3.",
+      "restrictions": "Only the documented renderer-faithful value subset is promised.",
+      "searchTerms": [
+        "display",
+        "CSS display"
+      ],
+      "verification": [
+        {
+          "kind": "implementation-contract",
+          "id": "CSS.Profile3.Property.display"
+        }
+      ],
+      "docs": "docs/web/CSS.md",
+      "upstream": "mdn-css-reference"
+    },
+    {
+      "id": "css.property.position",
+      "area": "css",
+      "kind": "property",
+      "external": "position",
+      "billow": "position",
+      "status": "supported_with_limits",
+      "summary": "CSS position is recognized by Billow CSS profile 3.",
+      "restrictions": "Only the documented renderer-faithful value subset is promised.",
+      "searchTerms": [
+        "position",
+        "CSS position"
+      ],
+      "verification": [
+        {
+          "kind": "implementation-contract",
+          "id": "CSS.Profile3.Property.position"
+        }
+      ],
+      "docs": "docs/web/CSS.md",
+      "upstream": "mdn-css-reference"
+    },
+    {
+      "id": "css.property.top",
+      "area": "css",
+      "kind": "property",
+      "external": "top",
+      "billow": "top",
+      "status": "supported_with_limits",
+      "summary": "CSS top is recognized by Billow CSS profile 3.",
+      "restrictions": "Only the documented renderer-faithful value subset is promised.",
+      "searchTerms": [
+        "top",
+        "CSS top"
+      ],
+      "verification": [
+        {
+          "kind": "implementation-contract",
+          "id": "CSS.Profile3.Property.top"
+        }
+      ],
+      "docs": "docs/web/CSS.md",
+      "upstream": "mdn-css-reference"
+    },
+    {
+      "id": "css.property.right",
+      "area": "css",
+      "kind": "property",
+      "external": "right",
+      "billow": "right",
+      "status": "supported_with_limits",
+      "summary": "CSS right is recognized by Billow CSS profile 3.",
+      "restrictions": "Only the documented renderer-faithful value subset is promised.",
+      "searchTerms": [
+        "right",
+        "CSS right"
+      ],
+      "verification": [
+        {
+          "kind": "implementation-contract",
+          "id": "CSS.Profile3.Property.right"
+        }
+      ],
+      "docs": "docs/web/CSS.md",
+      "upstream": "mdn-css-reference"
+    },
+    {
+      "id": "css.property.bottom",
+      "area": "css",
+      "kind": "property",
+      "external": "bottom",
+      "billow": "bottom",
+      "status": "supported_with_limits",
+      "summary": "CSS bottom is recognized by Billow CSS profile 3.",
+      "restrictions": "Only the documented renderer-faithful value subset is promised.",
+      "searchTerms": [
+        "bottom",
+        "CSS bottom"
+      ],
+      "verification": [
+        {
+          "kind": "implementation-contract",
+          "id": "CSS.Profile3.Property.bottom"
+        }
+      ],
+      "docs": "docs/web/CSS.md",
+      "upstream": "mdn-css-reference"
+    },
+    {
+      "id": "css.property.left",
+      "area": "css",
+      "kind": "property",
+      "external": "left",
+      "billow": "left",
+      "status": "supported_with_limits",
+      "summary": "CSS left is recognized by Billow CSS profile 3.",
+      "restrictions": "Only the documented renderer-faithful value subset is promised.",
+      "searchTerms": [
+        "left",
+        "CSS left"
+      ],
+      "verification": [
+        {
+          "kind": "implementation-contract",
+          "id": "CSS.Profile3.Property.left"
+        }
+      ],
+      "docs": "docs/web/CSS.md",
+      "upstream": "mdn-css-reference"
+    },
+    {
+      "id": "css.property.width",
+      "area": "css",
+      "kind": "property",
+      "external": "width",
+      "billow": "width",
+      "status": "supported_with_limits",
+      "summary": "CSS width is recognized by Billow CSS profile 3.",
+      "restrictions": "Only the documented renderer-faithful value subset is promised.",
+      "searchTerms": [
+        "width",
+        "CSS width"
+      ],
+      "verification": [
+        {
+          "kind": "implementation-contract",
+          "id": "CSS.Profile3.Property.width"
+        }
+      ],
+      "docs": "docs/web/CSS.md",
+      "upstream": "mdn-css-reference"
+    },
+    {
+      "id": "css.property.height",
+      "area": "css",
+      "kind": "property",
+      "external": "height",
+      "billow": "height",
+      "status": "supported_with_limits",
+      "summary": "CSS height is recognized by Billow CSS profile 3.",
+      "restrictions": "Only the documented renderer-faithful value subset is promised.",
+      "searchTerms": [
+        "height",
+        "CSS height"
+      ],
+      "verification": [
+        {
+          "kind": "implementation-contract",
+          "id": "CSS.Profile3.Property.height"
+        }
+      ],
+      "docs": "docs/web/CSS.md",
+      "upstream": "mdn-css-reference"
+    },
+    {
+      "id": "css.property.min-width",
+      "area": "css",
+      "kind": "property",
+      "external": "min-width",
+      "billow": "min-width",
+      "status": "supported_with_limits",
+      "summary": "CSS min-width is recognized by Billow CSS profile 3.",
+      "restrictions": "Only the documented renderer-faithful value subset is promised.",
+      "searchTerms": [
+        "min-width",
+        "CSS min-width"
+      ],
+      "verification": [
+        {
+          "kind": "implementation-contract",
+          "id": "CSS.Profile3.Property.min-width"
+        }
+      ],
+      "docs": "docs/web/CSS.md",
+      "upstream": "mdn-css-reference"
+    },
+    {
+      "id": "css.property.min-height",
+      "area": "css",
+      "kind": "property",
+      "external": "min-height",
+      "billow": "min-height",
+      "status": "supported_with_limits",
+      "summary": "CSS min-height is recognized by Billow CSS profile 3.",
+      "restrictions": "Only the documented renderer-faithful value subset is promised.",
+      "searchTerms": [
+        "min-height",
+        "CSS min-height"
+      ],
+      "verification": [
+        {
+          "kind": "implementation-contract",
+          "id": "CSS.Profile3.Property.min-height"
+        }
+      ],
+      "docs": "docs/web/CSS.md",
+      "upstream": "mdn-css-reference"
+    },
+    {
+      "id": "css.property.max-width",
+      "area": "css",
+      "kind": "property",
+      "external": "max-width",
+      "billow": "max-width",
+      "status": "supported_with_limits",
+      "summary": "CSS max-width is recognized by Billow CSS profile 3.",
+      "restrictions": "Only the documented renderer-faithful value subset is promised.",
+      "searchTerms": [
+        "max-width",
+        "CSS max-width"
+      ],
+      "verification": [
+        {
+          "kind": "implementation-contract",
+          "id": "CSS.Profile3.Property.max-width"
+        }
+      ],
+      "docs": "docs/web/CSS.md",
+      "upstream": "mdn-css-reference"
+    },
+    {
+      "id": "css.property.max-height",
+      "area": "css",
+      "kind": "property",
+      "external": "max-height",
+      "billow": "max-height",
+      "status": "supported_with_limits",
+      "summary": "CSS max-height is recognized by Billow CSS profile 3.",
+      "restrictions": "Only the documented renderer-faithful value subset is promised.",
+      "searchTerms": [
+        "max-height",
+        "CSS max-height"
+      ],
+      "verification": [
+        {
+          "kind": "implementation-contract",
+          "id": "CSS.Profile3.Property.max-height"
+        }
+      ],
+      "docs": "docs/web/CSS.md",
+      "upstream": "mdn-css-reference"
+    },
+    {
+      "id": "css.property.flex-direction",
+      "area": "css",
+      "kind": "property",
+      "external": "flex-direction",
+      "billow": "flex-direction",
+      "status": "supported_with_limits",
+      "summary": "CSS flex-direction is recognized by Billow CSS profile 3.",
+      "restrictions": "Only the documented renderer-faithful value subset is promised.",
+      "searchTerms": [
+        "flex-direction",
+        "CSS flex-direction"
+      ],
+      "verification": [
+        {
+          "kind": "implementation-contract",
+          "id": "CSS.Profile3.Property.flex-direction"
+        }
+      ],
+      "docs": "docs/web/CSS.md",
+      "upstream": "mdn-css-reference"
+    },
+    {
+      "id": "css.property.flex-wrap",
+      "area": "css",
+      "kind": "property",
+      "external": "flex-wrap",
+      "billow": "flex-wrap",
+      "status": "supported_with_limits",
+      "summary": "CSS flex-wrap is recognized by Billow CSS profile 3.",
+      "restrictions": "Only the documented renderer-faithful value subset is promised.",
+      "searchTerms": [
+        "flex-wrap",
+        "CSS flex-wrap"
+      ],
+      "verification": [
+        {
+          "kind": "implementation-contract",
+          "id": "CSS.Profile3.Property.flex-wrap"
+        }
+      ],
+      "docs": "docs/web/CSS.md",
+      "upstream": "mdn-css-reference"
+    },
+    {
+      "id": "css.property.flex-grow",
+      "area": "css",
+      "kind": "property",
+      "external": "flex-grow",
+      "billow": "flex-grow",
+      "status": "supported_with_limits",
+      "summary": "CSS flex-grow is recognized by Billow CSS profile 3.",
+      "restrictions": "Only the documented renderer-faithful value subset is promised.",
+      "searchTerms": [
+        "flex-grow",
+        "CSS flex-grow"
+      ],
+      "verification": [
+        {
+          "kind": "implementation-contract",
+          "id": "CSS.Profile3.Property.flex-grow"
+        }
+      ],
+      "docs": "docs/web/CSS.md",
+      "upstream": "mdn-css-reference"
+    },
+    {
+      "id": "css.property.flex-shrink",
+      "area": "css",
+      "kind": "property",
+      "external": "flex-shrink",
+      "billow": "flex-shrink",
+      "status": "supported_with_limits",
+      "summary": "CSS flex-shrink is recognized by Billow CSS profile 3.",
+      "restrictions": "Only the documented renderer-faithful value subset is promised.",
+      "searchTerms": [
+        "flex-shrink",
+        "CSS flex-shrink"
+      ],
+      "verification": [
+        {
+          "kind": "implementation-contract",
+          "id": "CSS.Profile3.Property.flex-shrink"
+        }
+      ],
+      "docs": "docs/web/CSS.md",
+      "upstream": "mdn-css-reference"
+    },
+    {
+      "id": "css.property.flex-basis",
+      "area": "css",
+      "kind": "property",
+      "external": "flex-basis",
+      "billow": "flex-basis",
+      "status": "supported_with_limits",
+      "summary": "CSS flex-basis is recognized by Billow CSS profile 3.",
+      "restrictions": "Only the documented renderer-faithful value subset is promised.",
+      "searchTerms": [
+        "flex-basis",
+        "CSS flex-basis"
+      ],
+      "verification": [
+        {
+          "kind": "implementation-contract",
+          "id": "CSS.Profile3.Property.flex-basis"
+        }
+      ],
+      "docs": "docs/web/CSS.md",
+      "upstream": "mdn-css-reference"
+    },
+    {
+      "id": "css.property.align-self",
+      "area": "css",
+      "kind": "property",
+      "external": "align-self",
+      "billow": "align-self",
+      "status": "supported_with_limits",
+      "summary": "CSS align-self is recognized by Billow CSS profile 3.",
+      "restrictions": "Only the documented renderer-faithful value subset is promised.",
+      "searchTerms": [
+        "align-self",
+        "CSS align-self"
+      ],
+      "verification": [
+        {
+          "kind": "implementation-contract",
+          "id": "CSS.Profile3.Property.align-self"
+        }
+      ],
+      "docs": "docs/web/CSS.md",
+      "upstream": "mdn-css-reference"
+    },
+    {
+      "id": "css.property.order",
+      "area": "css",
+      "kind": "property",
+      "external": "order",
+      "billow": "order",
+      "status": "supported_with_limits",
+      "summary": "CSS order is recognized by Billow CSS profile 3.",
+      "restrictions": "Only the documented renderer-faithful value subset is promised.",
+      "searchTerms": [
+        "order",
+        "CSS order"
+      ],
+      "verification": [
+        {
+          "kind": "implementation-contract",
+          "id": "CSS.Profile3.Property.order"
+        }
+      ],
+      "docs": "docs/web/CSS.md",
+      "upstream": "mdn-css-reference"
+    },
+    {
+      "id": "css.property.align-items",
+      "area": "css",
+      "kind": "property",
+      "external": "align-items",
+      "billow": "align-items",
+      "status": "supported_with_limits",
+      "summary": "CSS align-items is recognized by Billow CSS profile 3.",
+      "restrictions": "Only the documented renderer-faithful value subset is promised.",
+      "searchTerms": [
+        "align-items",
+        "CSS align-items"
+      ],
+      "verification": [
+        {
+          "kind": "implementation-contract",
+          "id": "CSS.Profile3.Property.align-items"
+        }
+      ],
+      "docs": "docs/web/CSS.md",
+      "upstream": "mdn-css-reference"
+    },
+    {
+      "id": "css.property.justify-content",
+      "area": "css",
+      "kind": "property",
+      "external": "justify-content",
+      "billow": "justify-content",
+      "status": "supported_with_limits",
+      "summary": "CSS justify-content is recognized by Billow CSS profile 3.",
+      "restrictions": "Only the documented renderer-faithful value subset is promised.",
+      "searchTerms": [
+        "justify-content",
+        "CSS justify-content"
+      ],
+      "verification": [
+        {
+          "kind": "implementation-contract",
+          "id": "CSS.Profile3.Property.justify-content"
+        }
+      ],
+      "docs": "docs/web/CSS.md",
+      "upstream": "mdn-css-reference"
+    },
+    {
+      "id": "css.property.margin",
+      "area": "css",
+      "kind": "property",
+      "external": "margin",
+      "billow": "margin",
+      "status": "supported_with_limits",
+      "summary": "CSS margin is recognized by Billow CSS profile 3.",
+      "restrictions": "Only the documented renderer-faithful value subset is promised.",
+      "searchTerms": [
+        "margin",
+        "CSS margin"
+      ],
+      "verification": [
+        {
+          "kind": "implementation-contract",
+          "id": "CSS.Profile3.Property.margin"
+        }
+      ],
+      "docs": "docs/web/CSS.md",
+      "upstream": "mdn-css-reference"
+    },
+    {
+      "id": "css.property.margin-top",
+      "area": "css",
+      "kind": "property",
+      "external": "margin-top",
+      "billow": "margin-top",
+      "status": "supported_with_limits",
+      "summary": "CSS margin-top is recognized by Billow CSS profile 3.",
+      "restrictions": "Only the documented renderer-faithful value subset is promised.",
+      "searchTerms": [
+        "margin-top",
+        "CSS margin-top"
+      ],
+      "verification": [
+        {
+          "kind": "implementation-contract",
+          "id": "CSS.Profile3.Property.margin-top"
+        }
+      ],
+      "docs": "docs/web/CSS.md",
+      "upstream": "mdn-css-reference"
+    },
+    {
+      "id": "css.property.margin-right",
+      "area": "css",
+      "kind": "property",
+      "external": "margin-right",
+      "billow": "margin-right",
+      "status": "supported_with_limits",
+      "summary": "CSS margin-right is recognized by Billow CSS profile 3.",
+      "restrictions": "Only the documented renderer-faithful value subset is promised.",
+      "searchTerms": [
+        "margin-right",
+        "CSS margin-right"
+      ],
+      "verification": [
+        {
+          "kind": "implementation-contract",
+          "id": "CSS.Profile3.Property.margin-right"
+        }
+      ],
+      "docs": "docs/web/CSS.md",
+      "upstream": "mdn-css-reference"
+    },
+    {
+      "id": "css.property.margin-bottom",
+      "area": "css",
+      "kind": "property",
+      "external": "margin-bottom",
+      "billow": "margin-bottom",
+      "status": "supported_with_limits",
+      "summary": "CSS margin-bottom is recognized by Billow CSS profile 3.",
+      "restrictions": "Only the documented renderer-faithful value subset is promised.",
+      "searchTerms": [
+        "margin-bottom",
+        "CSS margin-bottom"
+      ],
+      "verification": [
+        {
+          "kind": "implementation-contract",
+          "id": "CSS.Profile3.Property.margin-bottom"
+        }
+      ],
+      "docs": "docs/web/CSS.md",
+      "upstream": "mdn-css-reference"
+    },
+    {
+      "id": "css.property.margin-left",
+      "area": "css",
+      "kind": "property",
+      "external": "margin-left",
+      "billow": "margin-left",
+      "status": "supported_with_limits",
+      "summary": "CSS margin-left is recognized by Billow CSS profile 3.",
+      "restrictions": "Only the documented renderer-faithful value subset is promised.",
+      "searchTerms": [
+        "margin-left",
+        "CSS margin-left"
+      ],
+      "verification": [
+        {
+          "kind": "implementation-contract",
+          "id": "CSS.Profile3.Property.margin-left"
+        }
+      ],
+      "docs": "docs/web/CSS.md",
+      "upstream": "mdn-css-reference"
+    },
+    {
+      "id": "css.property.padding",
+      "area": "css",
+      "kind": "property",
+      "external": "padding",
+      "billow": "padding",
+      "status": "supported_with_limits",
+      "summary": "CSS padding is recognized by Billow CSS profile 3.",
+      "restrictions": "Only the documented renderer-faithful value subset is promised.",
+      "searchTerms": [
+        "padding",
+        "CSS padding"
+      ],
+      "verification": [
+        {
+          "kind": "implementation-contract",
+          "id": "CSS.Profile3.Property.padding"
+        }
+      ],
+      "docs": "docs/web/CSS.md",
+      "upstream": "mdn-css-reference"
+    },
+    {
+      "id": "css.property.padding-top",
+      "area": "css",
+      "kind": "property",
+      "external": "padding-top",
+      "billow": "padding-top",
+      "status": "supported_with_limits",
+      "summary": "CSS padding-top is recognized by Billow CSS profile 3.",
+      "restrictions": "Only the documented renderer-faithful value subset is promised.",
+      "searchTerms": [
+        "padding-top",
+        "CSS padding-top"
+      ],
+      "verification": [
+        {
+          "kind": "implementation-contract",
+          "id": "CSS.Profile3.Property.padding-top"
+        }
+      ],
+      "docs": "docs/web/CSS.md",
+      "upstream": "mdn-css-reference"
+    },
+    {
+      "id": "css.property.padding-right",
+      "area": "css",
+      "kind": "property",
+      "external": "padding-right",
+      "billow": "padding-right",
+      "status": "supported_with_limits",
+      "summary": "CSS padding-right is recognized by Billow CSS profile 3.",
+      "restrictions": "Only the documented renderer-faithful value subset is promised.",
+      "searchTerms": [
+        "padding-right",
+        "CSS padding-right"
+      ],
+      "verification": [
+        {
+          "kind": "implementation-contract",
+          "id": "CSS.Profile3.Property.padding-right"
+        }
+      ],
+      "docs": "docs/web/CSS.md",
+      "upstream": "mdn-css-reference"
+    },
+    {
+      "id": "css.property.padding-bottom",
+      "area": "css",
+      "kind": "property",
+      "external": "padding-bottom",
+      "billow": "padding-bottom",
+      "status": "supported_with_limits",
+      "summary": "CSS padding-bottom is recognized by Billow CSS profile 3.",
+      "restrictions": "Only the documented renderer-faithful value subset is promised.",
+      "searchTerms": [
+        "padding-bottom",
+        "CSS padding-bottom"
+      ],
+      "verification": [
+        {
+          "kind": "implementation-contract",
+          "id": "CSS.Profile3.Property.padding-bottom"
+        }
+      ],
+      "docs": "docs/web/CSS.md",
+      "upstream": "mdn-css-reference"
+    },
+    {
+      "id": "css.property.padding-left",
+      "area": "css",
+      "kind": "property",
+      "external": "padding-left",
+      "billow": "padding-left",
+      "status": "supported_with_limits",
+      "summary": "CSS padding-left is recognized by Billow CSS profile 3.",
+      "restrictions": "Only the documented renderer-faithful value subset is promised.",
+      "searchTerms": [
+        "padding-left",
+        "CSS padding-left"
+      ],
+      "verification": [
+        {
+          "kind": "implementation-contract",
+          "id": "CSS.Profile3.Property.padding-left"
+        }
+      ],
+      "docs": "docs/web/CSS.md",
+      "upstream": "mdn-css-reference"
+    },
+    {
+      "id": "css.property.gap",
+      "area": "css",
+      "kind": "property",
+      "external": "gap",
+      "billow": "gap",
+      "status": "supported_with_limits",
+      "summary": "CSS gap is recognized by Billow CSS profile 3.",
+      "restrictions": "Only the documented renderer-faithful value subset is promised.",
+      "searchTerms": [
+        "gap",
+        "CSS gap"
+      ],
+      "verification": [
+        {
+          "kind": "implementation-contract",
+          "id": "CSS.Profile3.Property.gap"
+        }
+      ],
+      "docs": "docs/web/CSS.md",
+      "upstream": "mdn-css-reference"
+    },
+    {
+      "id": "css.property.font-family",
+      "area": "css",
+      "kind": "property",
+      "external": "font-family",
+      "billow": "font-family",
+      "status": "supported_with_limits",
+      "summary": "CSS font-family is recognized by Billow CSS profile 3.",
+      "restrictions": "Only the documented renderer-faithful value subset is promised.",
+      "searchTerms": [
+        "font-family",
+        "CSS font-family"
+      ],
+      "verification": [
+        {
+          "kind": "implementation-contract",
+          "id": "CSS.Profile3.Property.font-family"
+        }
+      ],
+      "docs": "docs/web/CSS.md",
+      "upstream": "mdn-css-reference"
+    },
+    {
+      "id": "css.property.font-size",
+      "area": "css",
+      "kind": "property",
+      "external": "font-size",
+      "billow": "font-size",
+      "status": "supported_with_limits",
+      "summary": "CSS font-size is recognized by Billow CSS profile 3.",
+      "restrictions": "Only the documented renderer-faithful value subset is promised.",
+      "searchTerms": [
+        "font-size",
+        "CSS font-size"
+      ],
+      "verification": [
+        {
+          "kind": "implementation-contract",
+          "id": "CSS.Profile3.Property.font-size"
+        }
+      ],
+      "docs": "docs/web/CSS.md",
+      "upstream": "mdn-css-reference"
+    },
+    {
+      "id": "css.property.font-weight",
+      "area": "css",
+      "kind": "property",
+      "external": "font-weight",
+      "billow": "font-weight",
+      "status": "supported_with_limits",
+      "summary": "CSS font-weight is recognized by Billow CSS profile 3.",
+      "restrictions": "Only the documented renderer-faithful value subset is promised.",
+      "searchTerms": [
+        "font-weight",
+        "CSS font-weight"
+      ],
+      "verification": [
+        {
+          "kind": "implementation-contract",
+          "id": "CSS.Profile3.Property.font-weight"
+        }
+      ],
+      "docs": "docs/web/CSS.md",
+      "upstream": "mdn-css-reference"
+    },
+    {
+      "id": "css.property.font-style",
+      "area": "css",
+      "kind": "property",
+      "external": "font-style",
+      "billow": "font-style",
+      "status": "supported_with_limits",
+      "summary": "CSS font-style is recognized by Billow CSS profile 3.",
+      "restrictions": "Only the documented renderer-faithful value subset is promised.",
+      "searchTerms": [
+        "font-style",
+        "CSS font-style"
+      ],
+      "verification": [
+        {
+          "kind": "implementation-contract",
+          "id": "CSS.Profile3.Property.font-style"
+        }
+      ],
+      "docs": "docs/web/CSS.md",
+      "upstream": "mdn-css-reference"
+    },
+    {
+      "id": "css.property.line-height",
+      "area": "css",
+      "kind": "property",
+      "external": "line-height",
+      "billow": "line-height",
+      "status": "supported_with_limits",
+      "summary": "CSS line-height is recognized by Billow CSS profile 3.",
+      "restrictions": "Only the documented renderer-faithful value subset is promised.",
+      "searchTerms": [
+        "line-height",
+        "CSS line-height"
+      ],
+      "verification": [
+        {
+          "kind": "implementation-contract",
+          "id": "CSS.Profile3.Property.line-height"
+        }
+      ],
+      "docs": "docs/web/CSS.md",
+      "upstream": "mdn-css-reference"
+    },
+    {
+      "id": "css.property.text-align",
+      "area": "css",
+      "kind": "property",
+      "external": "text-align",
+      "billow": "text-align",
+      "status": "supported_with_limits",
+      "summary": "CSS text-align is recognized by Billow CSS profile 3.",
+      "restrictions": "Only the documented renderer-faithful value subset is promised.",
+      "searchTerms": [
+        "text-align",
+        "CSS text-align"
+      ],
+      "verification": [
+        {
+          "kind": "implementation-contract",
+          "id": "CSS.Profile3.Property.text-align"
+        }
+      ],
+      "docs": "docs/web/CSS.md",
+      "upstream": "mdn-css-reference"
+    },
+    {
+      "id": "css.property.color",
+      "area": "css",
+      "kind": "property",
+      "external": "color",
+      "billow": "color",
+      "status": "supported_with_limits",
+      "summary": "CSS color is recognized by Billow CSS profile 3.",
+      "restrictions": "Only the documented renderer-faithful value subset is promised.",
+      "searchTerms": [
+        "color",
+        "CSS color"
+      ],
+      "verification": [
+        {
+          "kind": "implementation-contract",
+          "id": "CSS.Profile3.Property.color"
+        }
+      ],
+      "docs": "docs/web/CSS.md",
+      "upstream": "mdn-css-reference"
+    },
+    {
+      "id": "css.property.background",
+      "area": "css",
+      "kind": "property",
+      "external": "background",
+      "billow": "background",
+      "status": "supported_with_limits",
+      "summary": "CSS background is recognized by Billow CSS profile 3.",
+      "restrictions": "Only the documented renderer-faithful value subset is promised.",
+      "searchTerms": [
+        "background",
+        "CSS background"
+      ],
+      "verification": [
+        {
+          "kind": "implementation-contract",
+          "id": "CSS.Profile3.Property.background"
+        }
+      ],
+      "docs": "docs/web/CSS.md",
+      "upstream": "mdn-css-reference"
+    },
+    {
+      "id": "css.property.background-color",
+      "area": "css",
+      "kind": "property",
+      "external": "background-color",
+      "billow": "background-color",
+      "status": "supported_with_limits",
+      "summary": "CSS background-color is recognized by Billow CSS profile 3.",
+      "restrictions": "Only the documented renderer-faithful value subset is promised.",
+      "searchTerms": [
+        "background-color",
+        "CSS background-color"
+      ],
+      "verification": [
+        {
+          "kind": "implementation-contract",
+          "id": "CSS.Profile3.Property.background-color"
+        }
+      ],
+      "docs": "docs/web/CSS.md",
+      "upstream": "mdn-css-reference"
+    },
+    {
+      "id": "css.property.background-image",
+      "area": "css",
+      "kind": "property",
+      "external": "background-image",
+      "billow": "background-image",
+      "status": "supported_with_limits",
+      "summary": "CSS background-image is recognized by Billow CSS profile 3.",
+      "restrictions": "Only the documented renderer-faithful value subset is promised.",
+      "searchTerms": [
+        "background-image",
+        "CSS background-image"
+      ],
+      "verification": [
+        {
+          "kind": "implementation-contract",
+          "id": "CSS.Profile3.Property.background-image"
+        }
+      ],
+      "docs": "docs/web/CSS.md",
+      "upstream": "mdn-css-reference"
+    },
+    {
+      "id": "css.property.background-size",
+      "area": "css",
+      "kind": "property",
+      "external": "background-size",
+      "billow": "background-size",
+      "status": "supported_with_limits",
+      "summary": "CSS background-size is recognized by Billow CSS profile 3.",
+      "restrictions": "Only the documented renderer-faithful value subset is promised.",
+      "searchTerms": [
+        "background-size",
+        "CSS background-size"
+      ],
+      "verification": [
+        {
+          "kind": "implementation-contract",
+          "id": "CSS.Profile3.Property.background-size"
+        }
+      ],
+      "docs": "docs/web/CSS.md",
+      "upstream": "mdn-css-reference"
+    },
+    {
+      "id": "css.property.background-position",
+      "area": "css",
+      "kind": "property",
+      "external": "background-position",
+      "billow": "background-position",
+      "status": "supported_with_limits",
+      "summary": "CSS background-position is recognized by Billow CSS profile 3.",
+      "restrictions": "Only the documented renderer-faithful value subset is promised.",
+      "searchTerms": [
+        "background-position",
+        "CSS background-position"
+      ],
+      "verification": [
+        {
+          "kind": "implementation-contract",
+          "id": "CSS.Profile3.Property.background-position"
+        }
+      ],
+      "docs": "docs/web/CSS.md",
+      "upstream": "mdn-css-reference"
+    },
+    {
+      "id": "css.property.opacity",
+      "area": "css",
+      "kind": "property",
+      "external": "opacity",
+      "billow": "opacity",
+      "status": "supported_with_limits",
+      "summary": "CSS opacity is recognized by Billow CSS profile 3.",
+      "restrictions": "Only the documented renderer-faithful value subset is promised.",
+      "searchTerms": [
+        "opacity",
+        "CSS opacity"
+      ],
+      "verification": [
+        {
+          "kind": "implementation-contract",
+          "id": "CSS.Profile3.Property.opacity"
+        }
+      ],
+      "docs": "docs/web/CSS.md",
+      "upstream": "mdn-css-reference"
+    },
+    {
+      "id": "css.property.overflow",
+      "area": "css",
+      "kind": "property",
+      "external": "overflow",
+      "billow": "overflow",
+      "status": "supported_with_limits",
+      "summary": "CSS overflow is recognized by Billow CSS profile 3.",
+      "restrictions": "Only the documented renderer-faithful value subset is promised.",
+      "searchTerms": [
+        "overflow",
+        "CSS overflow"
+      ],
+      "verification": [
+        {
+          "kind": "implementation-contract",
+          "id": "CSS.Profile3.Property.overflow"
+        }
+      ],
+      "docs": "docs/web/CSS.md",
+      "upstream": "mdn-css-reference"
+    },
+    {
+      "id": "css.property.pointer-events",
+      "area": "css",
+      "kind": "property",
+      "external": "pointer-events",
+      "billow": "pointer-events",
+      "status": "supported_with_limits",
+      "summary": "CSS pointer-events is recognized by Billow CSS profile 3.",
+      "restrictions": "Only the documented renderer-faithful value subset is promised.",
+      "searchTerms": [
+        "pointer-events",
+        "CSS pointer-events"
+      ],
+      "verification": [
+        {
+          "kind": "implementation-contract",
+          "id": "CSS.Profile3.Property.pointer-events"
+        }
+      ],
+      "docs": "docs/web/CSS.md",
+      "upstream": "mdn-css-reference"
+    },
+    {
+      "id": "css.property.white-space",
+      "area": "css",
+      "kind": "property",
+      "external": "white-space",
+      "billow": "white-space",
+      "status": "supported_with_limits",
+      "summary": "CSS white-space is recognized by Billow CSS profile 3.",
+      "restrictions": "Only the documented renderer-faithful value subset is promised.",
+      "searchTerms": [
+        "white-space",
+        "CSS white-space"
+      ],
+      "verification": [
+        {
+          "kind": "implementation-contract",
+          "id": "CSS.Profile3.Property.white-space"
+        }
+      ],
+      "docs": "docs/web/CSS.md",
+      "upstream": "mdn-css-reference"
+    },
+    {
+      "id": "css.property.text-decoration",
+      "area": "css",
+      "kind": "property",
+      "external": "text-decoration",
+      "billow": "text-decoration",
+      "status": "supported_with_limits",
+      "summary": "CSS text-decoration is recognized by Billow CSS profile 3.",
+      "restrictions": "Only the documented renderer-faithful value subset is promised.",
+      "searchTerms": [
+        "text-decoration",
+        "CSS text-decoration"
+      ],
+      "verification": [
+        {
+          "kind": "implementation-contract",
+          "id": "CSS.Profile3.Property.text-decoration"
+        }
+      ],
+      "docs": "docs/web/CSS.md",
+      "upstream": "mdn-css-reference"
+    },
+    {
+      "id": "css.property.border-radius",
+      "area": "css",
+      "kind": "property",
+      "external": "border-radius",
+      "billow": "border-radius",
+      "status": "supported_with_limits",
+      "summary": "CSS border-radius is recognized by Billow CSS profile 3.",
+      "restrictions": "Only the documented renderer-faithful value subset is promised.",
+      "searchTerms": [
+        "border-radius",
+        "CSS border-radius"
+      ],
+      "verification": [
+        {
+          "kind": "implementation-contract",
+          "id": "CSS.Profile3.Property.border-radius"
+        }
+      ],
+      "docs": "docs/web/CSS.md",
+      "upstream": "mdn-css-reference"
+    },
+    {
+      "id": "css.property.border",
+      "area": "css",
+      "kind": "property",
+      "external": "border",
+      "billow": "border",
+      "status": "supported_with_limits",
+      "summary": "CSS border is recognized by Billow CSS profile 3.",
+      "restrictions": "Only the documented renderer-faithful value subset is promised.",
+      "searchTerms": [
+        "border",
+        "CSS border"
+      ],
+      "verification": [
+        {
+          "kind": "implementation-contract",
+          "id": "CSS.Profile3.Property.border"
+        }
+      ],
+      "docs": "docs/web/CSS.md",
+      "upstream": "mdn-css-reference"
+    },
+    {
+      "id": "css.property.border-width",
+      "area": "css",
+      "kind": "property",
+      "external": "border-width",
+      "billow": "border-width",
+      "status": "supported_with_limits",
+      "summary": "CSS border-width is recognized by Billow CSS profile 3.",
+      "restrictions": "Only the documented renderer-faithful value subset is promised.",
+      "searchTerms": [
+        "border-width",
+        "CSS border-width"
+      ],
+      "verification": [
+        {
+          "kind": "implementation-contract",
+          "id": "CSS.Profile3.Property.border-width"
+        }
+      ],
+      "docs": "docs/web/CSS.md",
+      "upstream": "mdn-css-reference"
+    },
+    {
+      "id": "css.property.border-style",
+      "area": "css",
+      "kind": "property",
+      "external": "border-style",
+      "billow": "border-style",
+      "status": "supported_with_limits",
+      "summary": "CSS border-style is recognized by Billow CSS profile 3.",
+      "restrictions": "Only the documented renderer-faithful value subset is promised.",
+      "searchTerms": [
+        "border-style",
+        "CSS border-style"
+      ],
+      "verification": [
+        {
+          "kind": "implementation-contract",
+          "id": "CSS.Profile3.Property.border-style"
+        }
+      ],
+      "docs": "docs/web/CSS.md",
+      "upstream": "mdn-css-reference"
+    },
+    {
+      "id": "css.property.border-color",
+      "area": "css",
+      "kind": "property",
+      "external": "border-color",
+      "billow": "border-color",
+      "status": "supported_with_limits",
+      "summary": "CSS border-color is recognized by Billow CSS profile 3.",
+      "restrictions": "Only the documented renderer-faithful value subset is promised.",
+      "searchTerms": [
+        "border-color",
+        "CSS border-color"
+      ],
+      "verification": [
+        {
+          "kind": "implementation-contract",
+          "id": "CSS.Profile3.Property.border-color"
+        }
+      ],
+      "docs": "docs/web/CSS.md",
+      "upstream": "mdn-css-reference"
+    },
+    {
+      "id": "css.property.object-fit",
+      "area": "css",
+      "kind": "property",
+      "external": "object-fit",
+      "billow": "object-fit",
+      "status": "supported_with_limits",
+      "summary": "CSS object-fit is recognized by Billow CSS profile 3.",
+      "restrictions": "Only the documented renderer-faithful value subset is promised.",
+      "searchTerms": [
+        "object-fit",
+        "CSS object-fit"
+      ],
+      "verification": [
+        {
+          "kind": "implementation-contract",
+          "id": "CSS.Profile3.Property.object-fit"
+        }
+      ],
+      "docs": "docs/web/CSS.md",
+      "upstream": "mdn-css-reference"
+    },
+    {
+      "id": "css.property.user-select",
+      "area": "css",
+      "kind": "property",
+      "external": "user-select",
+      "billow": "user-select",
+      "status": "supported_with_limits",
+      "summary": "CSS user-select is recognized by Billow CSS profile 3.",
+      "restrictions": "Only the documented renderer-faithful value subset is promised.",
+      "searchTerms": [
+        "user-select",
+        "CSS user-select"
+      ],
+      "verification": [
+        {
+          "kind": "implementation-contract",
+          "id": "CSS.Profile3.Property.user-select"
+        }
+      ],
+      "docs": "docs/web/CSS.md",
+      "upstream": "mdn-css-reference"
+    },
+    {
+      "id": "css.property.aspect-ratio",
+      "area": "css",
+      "kind": "property",
+      "external": "aspect-ratio",
+      "billow": "aspect-ratio",
+      "status": "supported_with_limits",
+      "summary": "CSS aspect-ratio is recognized by Billow CSS profile 3.",
+      "restrictions": "Only the documented renderer-faithful value subset is promised.",
+      "searchTerms": [
+        "aspect-ratio",
+        "CSS aspect-ratio"
+      ],
+      "verification": [
+        {
+          "kind": "implementation-contract",
+          "id": "CSS.Profile3.Property.aspect-ratio"
+        }
+      ],
+      "docs": "docs/web/CSS.md",
+      "upstream": "mdn-css-reference"
+    },
+    {
+      "id": "css.pseudo.hover",
+      "area": "css",
+      "kind": "pseudo-class",
+      "external": ":hover",
+      "billow": ":hover",
+      "status": "supported_with_limits",
+      "summary": ":hover is accepted by the current selector profile.",
+      "restrictions": "State is Billow document/renderer state, not an unrestricted browser DOM.",
+      "searchTerms": [
+        "hover",
+        ":hover"
+      ],
+      "verification": [
+        {
+          "kind": "implementation-contract",
+          "id": "CSS.Profile3.Pseudo.hover"
+        }
+      ],
+      "docs": "docs/web/CSS.md",
+      "upstream": "mdn-css-selectors"
+    },
+    {
+      "id": "css.pseudo.focus",
+      "area": "css",
+      "kind": "pseudo-class",
+      "external": ":focus",
+      "billow": ":focus",
+      "status": "supported_with_limits",
+      "summary": ":focus is accepted by the current selector profile.",
+      "restrictions": "State is Billow document/renderer state, not an unrestricted browser DOM.",
+      "searchTerms": [
+        "focus",
+        ":focus"
+      ],
+      "verification": [
+        {
+          "kind": "implementation-contract",
+          "id": "CSS.Profile3.Pseudo.focus"
+        }
+      ],
+      "docs": "docs/web/CSS.md",
+      "upstream": "mdn-css-selectors"
+    },
+    {
+      "id": "css.pseudo.disabled",
+      "area": "css",
+      "kind": "pseudo-class",
+      "external": ":disabled",
+      "billow": ":disabled",
+      "status": "supported_with_limits",
+      "summary": ":disabled is accepted by the current selector profile.",
+      "restrictions": "State is Billow document/renderer state, not an unrestricted browser DOM.",
+      "searchTerms": [
+        "disabled",
+        ":disabled"
+      ],
+      "verification": [
+        {
+          "kind": "implementation-contract",
+          "id": "CSS.Profile3.Pseudo.disabled"
+        }
+      ],
+      "docs": "docs/web/CSS.md",
+      "upstream": "mdn-css-selectors"
+    },
+    {
+      "id": "css.pseudo.checked",
+      "area": "css",
+      "kind": "pseudo-class",
+      "external": ":checked",
+      "billow": ":checked",
+      "status": "supported_with_limits",
+      "summary": ":checked is accepted by the current selector profile.",
+      "restrictions": "State is Billow document/renderer state, not an unrestricted browser DOM.",
+      "searchTerms": [
+        "checked",
+        ":checked"
+      ],
+      "verification": [
+        {
+          "kind": "implementation-contract",
+          "id": "CSS.Profile3.Pseudo.checked"
+        }
+      ],
+      "docs": "docs/web/CSS.md",
+      "upstream": "mdn-css-selectors"
+    },
+    {
+      "id": "css.pseudo.first-child",
+      "area": "css",
+      "kind": "pseudo-class",
+      "external": ":first-child",
+      "billow": ":first-child",
+      "status": "supported_with_limits",
+      "summary": ":first-child is accepted by the current selector profile.",
+      "restrictions": "State is Billow document/renderer state, not an unrestricted browser DOM.",
+      "searchTerms": [
+        "first-child",
+        ":first-child"
+      ],
+      "verification": [
+        {
+          "kind": "implementation-contract",
+          "id": "CSS.Profile3.Pseudo.first-child"
+        }
+      ],
+      "docs": "docs/web/CSS.md",
+      "upstream": "mdn-css-selectors"
+    },
+    {
+      "id": "css.pseudo.last-child",
+      "area": "css",
+      "kind": "pseudo-class",
+      "external": ":last-child",
+      "billow": ":last-child",
+      "status": "supported_with_limits",
+      "summary": ":last-child is accepted by the current selector profile.",
+      "restrictions": "State is Billow document/renderer state, not an unrestricted browser DOM.",
+      "searchTerms": [
+        "last-child",
+        ":last-child"
+      ],
+      "verification": [
+        {
+          "kind": "implementation-contract",
+          "id": "CSS.Profile3.Pseudo.last-child"
+        }
+      ],
+      "docs": "docs/web/CSS.md",
+      "upstream": "mdn-css-selectors"
+    },
+    {
+      "id": "css.layout.flexbox",
+      "area": "css",
+      "kind": "concept",
+      "external": "flexbox",
+      "billow": "flexbox",
+      "status": "supported_with_limits",
+      "summary": "A bounded flex layout subset is available.",
+      "restrictions": "Check property/value-specific limits.",
+      "searchTerms": [
+        "flexbox"
+      ],
+      "verification": [
+        {
+          "kind": "implementation-contract",
+          "id": "CSS.Profile3.ParserAndCascade"
+        }
+      ],
+      "docs": "docs/web/CSS.md",
+      "upstream": "mdn-css-reference"
+    },
+    {
+      "id": "css.selector.type",
+      "area": "css",
+      "kind": "concept",
+      "external": "type selector",
+      "billow": "type selector",
+      "status": "supported_with_limits",
+      "summary": "Element selectors are supported.",
+      "restrictions": "Check property/value-specific limits.",
+      "searchTerms": [
+        "type selector"
+      ],
+      "verification": [
+        {
+          "kind": "implementation-contract",
+          "id": "CSS.Profile3.ParserAndCascade"
+        }
+      ],
+      "docs": "docs/web/CSS.md",
+      "upstream": "mdn-css-reference"
+    },
+    {
+      "id": "css.selector.id",
+      "area": "css",
+      "kind": "concept",
+      "external": "#id selector",
+      "billow": "#id selector",
+      "status": "supported_with_limits",
+      "summary": "ID selectors are supported.",
+      "restrictions": "Check property/value-specific limits.",
+      "searchTerms": [
+        "#id selector"
+      ],
+      "verification": [
+        {
+          "kind": "implementation-contract",
+          "id": "CSS.Profile3.ParserAndCascade"
+        }
+      ],
+      "docs": "docs/web/CSS.md",
+      "upstream": "mdn-css-reference"
+    },
+    {
+      "id": "css.selector.class",
+      "area": "css",
+      "kind": "concept",
+      "external": ".class selector",
+      "billow": ".class selector",
+      "status": "supported_with_limits",
+      "summary": "Class selectors are supported.",
+      "restrictions": "Check property/value-specific limits.",
+      "searchTerms": [
+        ".class selector"
+      ],
+      "verification": [
+        {
+          "kind": "implementation-contract",
+          "id": "CSS.Profile3.ParserAndCascade"
+        }
+      ],
+      "docs": "docs/web/CSS.md",
+      "upstream": "mdn-css-reference"
+    },
+    {
+      "id": "css.selector.universal",
+      "area": "css",
+      "kind": "concept",
+      "external": "* selector",
+      "billow": "* selector",
+      "status": "supported_with_limits",
+      "summary": "The universal selector is supported.",
+      "restrictions": "Check property/value-specific limits.",
+      "searchTerms": [
+        "* selector"
+      ],
+      "verification": [
+        {
+          "kind": "implementation-contract",
+          "id": "CSS.Profile3.ParserAndCascade"
+        }
+      ],
+      "docs": "docs/web/CSS.md",
+      "upstream": "mdn-css-reference"
+    },
+    {
+      "id": "css.combinator.descendant",
+      "area": "css",
+      "kind": "concept",
+      "external": "descendant combinator",
+      "billow": "descendant combinator",
+      "status": "supported_with_limits",
+      "summary": "Descendant combinators are supported.",
+      "restrictions": "Check property/value-specific limits.",
+      "searchTerms": [
+        "descendant combinator"
+      ],
+      "verification": [
+        {
+          "kind": "implementation-contract",
+          "id": "CSS.Profile3.ParserAndCascade"
+        }
+      ],
+      "docs": "docs/web/CSS.md",
+      "upstream": "mdn-css-reference"
+    },
+    {
+      "id": "css.combinator.child",
+      "area": "css",
+      "kind": "concept",
+      "external": "> child combinator",
+      "billow": "> child combinator",
+      "status": "supported_with_limits",
+      "summary": "Child combinators are supported.",
+      "restrictions": "Check property/value-specific limits.",
+      "searchTerms": [
+        "> child combinator"
+      ],
+      "verification": [
+        {
+          "kind": "implementation-contract",
+          "id": "CSS.Profile3.ParserAndCascade"
+        }
+      ],
+      "docs": "docs/web/CSS.md",
+      "upstream": "mdn-css-reference"
+    },
+    {
+      "id": "css.media.width",
+      "area": "css",
+      "kind": "concept",
+      "external": "@media min-width/max-width",
+      "billow": "@media min-width/max-width",
+      "status": "supported_with_limits",
+      "summary": "Bounded width queries are supported in px.",
+      "restrictions": "Check property/value-specific limits.",
+      "searchTerms": [
+        "@media min-width/max-width"
+      ],
+      "verification": [
+        {
+          "kind": "implementation-contract",
+          "id": "CSS.Profile3.ParserAndCascade"
+        }
+      ],
+      "docs": "docs/web/CSS.md",
+      "upstream": "mdn-css-reference"
+    },
+    {
+      "id": "css.units.core",
+      "area": "css",
+      "kind": "concept",
+      "external": "px, %, vw, vh",
+      "billow": "px, %, vw, vh",
+      "status": "supported_with_limits",
+      "summary": "Core Billow length units are supported where the property accepts them.",
+      "restrictions": "Check property/value-specific limits.",
+      "searchTerms": [
+        "px, %, vw, vh"
+      ],
+      "verification": [
+        {
+          "kind": "implementation-contract",
+          "id": "CSS.Profile3.ParserAndCascade"
+        }
+      ],
+      "docs": "docs/web/CSS.md",
+      "upstream": "mdn-css-reference"
+    },
+    {
+      "id": "css.selector.attribute",
+      "area": "css",
+      "kind": "concept",
+      "external": "[attribute] selectors",
+      "billow": null,
+      "status": "unsupported",
+      "summary": "[attribute] selectors are rejected by the current CSS profile.",
+      "restrictions": "Not implemented; future support is not promised.",
+      "searchTerms": [
+        "[attribute] selectors"
+      ],
+      "verification": [
+        {
+          "kind": "implementation-contract",
+          "id": "CSS.Profile3.ExplicitUnsupported"
+        }
+      ],
+      "docs": "docs/web/CSS.md",
+      "upstream": "mdn-css-reference"
+    },
+    {
+      "id": "css.selector.pseudo-element",
+      "area": "css",
+      "kind": "concept",
+      "external": "::pseudo-elements",
+      "billow": null,
+      "status": "unsupported",
+      "summary": "::pseudo-elements are rejected by the current CSS profile.",
+      "restrictions": "Not implemented; future support is not promised.",
+      "searchTerms": [
+        "::pseudo-elements"
+      ],
+      "verification": [
+        {
+          "kind": "implementation-contract",
+          "id": "CSS.Profile3.ExplicitUnsupported"
+        }
+      ],
+      "docs": "docs/web/CSS.md",
+      "upstream": "mdn-css-reference"
+    },
+    {
+      "id": "css.custom-properties",
+      "area": "css",
+      "kind": "concept",
+      "external": "CSS custom properties",
+      "billow": null,
+      "status": "unsupported",
+      "summary": "CSS custom properties are rejected by the current CSS profile.",
+      "restrictions": "Not implemented; future support is not promised.",
+      "searchTerms": [
+        "CSS custom properties"
+      ],
+      "verification": [
+        {
+          "kind": "implementation-contract",
+          "id": "CSS.Profile3.ExplicitUnsupported"
+        }
+      ],
+      "docs": "docs/web/CSS.md",
+      "upstream": "mdn-css-reference"
+    },
+    {
+      "id": "css.nesting",
+      "area": "css",
+      "kind": "concept",
+      "external": "CSS nesting",
+      "billow": null,
+      "status": "unsupported",
+      "summary": "CSS nesting are rejected by the current CSS profile.",
+      "restrictions": "Not implemented; future support is not promised.",
+      "searchTerms": [
+        "CSS nesting"
+      ],
+      "verification": [
+        {
+          "kind": "implementation-contract",
+          "id": "CSS.Profile3.ExplicitUnsupported"
+        }
+      ],
+      "docs": "docs/web/CSS.md",
+      "upstream": "mdn-css-reference"
+    },
+    {
+      "id": "language.typescript",
+      "area": "language",
+      "kind": "language",
+      "external": "TypeScript",
+      "billow": "TypeScript",
+      "status": "experimental",
+      "summary": "Default Creator application source direction; production integration is still in progress.",
+      "restrictions": "Language availability never bypasses Billow capabilities/sandboxing.",
+      "searchTerms": [
+        "TypeScript",
+        "TypeScript"
+      ],
+      "verification": [
+        {
+          "kind": "project-gate",
+          "id": "CreatorStandardsCutover.TypeScript.PendingIntegration"
+        }
+      ],
+      "docs": "docs/getting-started/OVERVIEW.md",
+      "upstream": "typescript-docs"
+    },
+    {
+      "id": "language.javascript",
+      "area": "language",
+      "kind": "language",
+      "external": "JavaScript",
+      "billow": "JavaScript",
+      "status": "experimental",
+      "summary": "Standards source path exists; production integration is still in progress.",
+      "restrictions": "Language availability never bypasses Billow capabilities/sandboxing.",
+      "searchTerms": [
+        "JavaScript",
+        "JavaScript"
+      ],
+      "verification": [
+        {
+          "kind": "project-gate",
+          "id": "CreatorStandardsCutover.JavaScript.PendingIntegration"
+        }
+      ],
+      "docs": "docs/getting-started/OVERVIEW.md",
+      "upstream": "javascript-mdn"
+    },
+    {
+      "id": "language.luau",
+      "area": "language",
+      "kind": "language",
+      "external": "Luau",
+      "billow": "Luau",
+      "status": "supported_with_limits",
+      "summary": "Supported Creator application source within Billow authority boundaries.",
+      "restrictions": "Language availability never bypasses Billow capabilities/sandboxing.",
+      "searchTerms": [
+        "Luau",
+        "Luau"
+      ],
+      "verification": [
+        {
+          "kind": "project-gate",
+          "id": "CreatorStandardsCutover.Luau.ApplicationProfile"
+        }
+      ],
+      "docs": "docs/getting-started/OVERVIEW.md",
+      "upstream": "luau-docs"
+    },
+    {
+      "id": "language.jml",
+      "area": "language",
+      "kind": "language",
+      "external": "JML",
+      "billow": "HTML",
+      "status": "deprecated",
+      "summary": "Legacy authoring vocabulary; new web direction is HTML.",
+      "restrictions": "Language availability never bypasses Billow capabilities/sandboxing.",
+      "searchTerms": [
+        "JML",
+        "HTML"
+      ],
+      "verification": [
+        {
+          "kind": "project-gate",
+          "id": "CreatorLanguageHardCut.LegacyJML"
+        }
+      ],
+      "docs": "docs/getting-started/OVERVIEW.md",
+      "upstream": null
+    },
+    {
+      "id": "language.jss",
+      "area": "language",
+      "kind": "language",
+      "external": "JSS",
+      "billow": "CSS",
+      "status": "deprecated",
+      "summary": "Legacy authoring vocabulary; new web direction is CSS.",
+      "restrictions": "Language availability never bypasses Billow capabilities/sandboxing.",
+      "searchTerms": [
+        "JSS",
+        "CSS"
+      ],
+      "verification": [
+        {
+          "kind": "project-gate",
+          "id": "CreatorLanguageHardCut.LegacyJSS"
+        }
+      ],
+      "docs": "docs/getting-started/OVERVIEW.md",
+      "upstream": null
+    },
+    {
+      "id": "language.bts",
+      "area": "language",
+      "kind": "language",
+      "external": "Billow TypeScript (.bts)",
+      "billow": "TypeScript (.ts)",
+      "status": "deprecated",
+      "summary": "Legacy extension; new TypeScript authoring uses .ts.",
+      "restrictions": "Language availability never bypasses Billow capabilities/sandboxing.",
+      "searchTerms": [
+        "Billow TypeScript (.bts)",
+        "TypeScript (.ts)"
+      ],
+      "verification": [
+        {
+          "kind": "project-gate",
+          "id": "CreatorLanguageHardCut.LegacyBTS"
+        }
+      ],
+      "docs": "docs/getting-started/OVERVIEW.md",
+      "upstream": "typescript-docs"
+    },
+    {
+      "id": "web.api.document-getElementById",
+      "area": "web-api",
+      "kind": "api",
+      "external": "document.getElementById",
+      "billow": "getElementById",
+      "status": "experimental",
+      "summary": "Billow exposes a capability-mediated document.getElementById analogue for page programs.",
+      "restrictions": "Bounded/same-origin/capability constrained; no raw Roblox objects or complete browser DOM.",
+      "searchTerms": [
+        "document.getElementById",
+        "getElementById",
+        "DOM"
+      ],
+      "verification": [
+        {
+          "kind": "conformance-test",
+          "id": "DLP8WebFacadeSelfTest"
+        }
+      ],
+      "docs": "docs/web/README.md",
+      "upstream": "mdn-web-api"
+    },
+    {
+      "id": "web.api.document-querySelector",
+      "area": "web-api",
+      "kind": "api",
+      "external": "document.querySelector",
+      "billow": "querySelector",
+      "status": "experimental",
+      "summary": "Billow exposes a capability-mediated document.querySelector analogue for page programs.",
+      "restrictions": "Bounded/same-origin/capability constrained; no raw Roblox objects or complete browser DOM.",
+      "searchTerms": [
+        "document.querySelector",
+        "querySelector",
+        "DOM"
+      ],
+      "verification": [
+        {
+          "kind": "conformance-test",
+          "id": "DLP8WebFacadeSelfTest"
+        }
+      ],
+      "docs": "docs/web/README.md",
+      "upstream": "mdn-web-api"
+    },
+    {
+      "id": "web.api.element-textContent",
+      "area": "web-api",
+      "kind": "api",
+      "external": "element.textContent",
+      "billow": "textContent/setTextContent",
+      "status": "experimental",
+      "summary": "Billow exposes a capability-mediated element.textContent analogue for page programs.",
+      "restrictions": "Bounded/same-origin/capability constrained; no raw Roblox objects or complete browser DOM.",
+      "searchTerms": [
+        "element.textContent",
+        "textContent/setTextContent",
+        "DOM"
+      ],
+      "verification": [
+        {
+          "kind": "conformance-test",
+          "id": "DLP8WebFacadeSelfTest"
+        }
+      ],
+      "docs": "docs/web/README.md",
+      "upstream": "mdn-web-api"
+    },
+    {
+      "id": "web.api.element-attributes",
+      "area": "web-api",
+      "kind": "api",
+      "external": "element.attributes",
+      "billow": "getAttribute/setAttribute/removeAttribute",
+      "status": "experimental",
+      "summary": "Billow exposes a capability-mediated element.attributes analogue for page programs.",
+      "restrictions": "Bounded/same-origin/capability constrained; no raw Roblox objects or complete browser DOM.",
+      "searchTerms": [
+        "element.attributes",
+        "getAttribute/setAttribute/removeAttribute",
+        "DOM"
+      ],
+      "verification": [
+        {
+          "kind": "conformance-test",
+          "id": "DLP8WebFacadeSelfTest"
+        }
+      ],
+      "docs": "docs/web/README.md",
+      "upstream": "mdn-web-api"
+    },
+    {
+      "id": "web.api.element-classList",
+      "area": "web-api",
+      "kind": "api",
+      "external": "element.classList",
+      "billow": "classAdd/classRemove/classToggle/classContains",
+      "status": "experimental",
+      "summary": "Billow exposes a capability-mediated element.classList analogue for page programs.",
+      "restrictions": "Bounded/same-origin/capability constrained; no raw Roblox objects or complete browser DOM.",
+      "searchTerms": [
+        "element.classList",
+        "classAdd/classRemove/classToggle/classContains",
+        "DOM"
+      ],
+      "verification": [
+        {
+          "kind": "conformance-test",
+          "id": "DLP8WebFacadeSelfTest"
+        }
+      ],
+      "docs": "docs/web/README.md",
+      "upstream": "mdn-web-api"
+    },
+    {
+      "id": "web.api.element-events",
+      "area": "web-api",
+      "kind": "api",
+      "external": "element.events",
+      "billow": "addEventListener/removeEventListener",
+      "status": "experimental",
+      "summary": "Billow exposes a capability-mediated element.events analogue for page programs.",
+      "restrictions": "Bounded/same-origin/capability constrained; no raw Roblox objects or complete browser DOM.",
+      "searchTerms": [
+        "element.events",
+        "addEventListener/removeEventListener",
+        "DOM"
+      ],
+      "verification": [
+        {
+          "kind": "conformance-test",
+          "id": "DLP8WebFacadeSelfTest"
+        }
+      ],
+      "docs": "docs/web/README.md",
+      "upstream": "mdn-web-api"
+    },
+    {
+      "id": "web.api.storage-origin",
+      "area": "web-api",
+      "kind": "api",
+      "external": "storage.origin",
+      "billow": "storageGet/storageSet/storageRemove/storageClear",
+      "status": "experimental",
+      "summary": "Billow exposes a capability-mediated storage.origin analogue for page programs.",
+      "restrictions": "Bounded/same-origin/capability constrained; no raw Roblox objects or complete browser DOM.",
+      "searchTerms": [
+        "storage.origin",
+        "storageGet/storageSet/storageRemove/storageClear",
+        "DOM"
+      ],
+      "verification": [
+        {
+          "kind": "conformance-test",
+          "id": "DLP8WebFacadeSelfTest"
+        }
+      ],
+      "docs": "docs/web/README.md",
+      "upstream": "mdn-web-api"
+    },
+    {
+      "id": "web.api.fetch-same-origin",
+      "area": "web-api",
+      "kind": "api",
+      "external": "fetch.same-origin",
+      "billow": "request",
+      "status": "experimental",
+      "summary": "Billow exposes a capability-mediated fetch.same-origin analogue for page programs.",
+      "restrictions": "Bounded/same-origin/capability constrained; no raw Roblox objects or complete browser DOM.",
+      "searchTerms": [
+        "fetch.same-origin",
+        "request",
+        "DOM"
+      ],
+      "verification": [
+        {
+          "kind": "conformance-test",
+          "id": "DLP8WebFacadeSelfTest"
+        }
+      ],
+      "docs": "docs/web/README.md",
+      "upstream": "mdn-web-api"
+    },
+    {
+      "id": "web.api.location-navigation",
+      "area": "web-api",
+      "kind": "api",
+      "external": "location.navigation",
+      "billow": "location/navigate",
+      "status": "experimental",
+      "summary": "Billow exposes a capability-mediated location.navigation analogue for page programs.",
+      "restrictions": "Bounded/same-origin/capability constrained; no raw Roblox objects or complete browser DOM.",
+      "searchTerms": [
+        "location.navigation",
+        "location/navigate",
+        "DOM"
+      ],
+      "verification": [
+        {
+          "kind": "conformance-test",
+          "id": "DLP8WebFacadeSelfTest"
+        }
+      ],
+      "docs": "docs/web/README.md",
+      "upstream": "mdn-web-api"
+    },
+    {
+      "id": "web.api.innerhtml",
+      "area": "web-api",
+      "kind": "api",
+      "external": "innerHTML",
+      "billow": null,
+      "status": "intentionally_unsupported",
+      "summary": "No raw-markup innerHTML sink is exposed.",
+      "restrictions": "Use controlled text/attribute/class operations.",
+      "searchTerms": [
+        "innerHTML",
+        "raw HTML mutation"
+      ],
+      "verification": [
+        {
+          "kind": "conformance-test",
+          "id": "DLP8WebFacadeSelfTest.no-raw-markup-sink"
+        }
+      ],
+      "docs": "docs/web/README.md",
+      "upstream": "mdn-web-api"
+    },
+    {
+      "id": "web.network.external-http",
+      "area": "web-api",
+      "kind": "network",
+      "external": "arbitrary cross-origin fetch",
+      "billow": null,
+      "status": "intentionally_unsupported",
+      "summary": "Untrusted public pages do not receive arbitrary external HTTP access.",
+      "restrictions": "Requests are mediated by Billow origin/capability policy.",
+      "searchTerms": [
+        "HTTP request",
+        "fetch external",
+        "CORS"
+      ],
+      "verification": [
+        {
+          "kind": "architecture-contract",
+          "id": "Billow.Web.CapabilityMediatedNetwork"
+        }
+      ],
+      "docs": "docs/web/README.md",
+      "upstream": "mdn-fetch"
+    },
+    {
+      "id": "billow.uri.scheme",
+      "area": "billow",
+      "kind": "extension",
+      "external": "URL/URI scheme",
+      "billow": "billow://",
+      "status": "billow_extension",
+      "summary": "billow:// addresses logical Billow routes/deployments.",
+      "restrictions": "It is not a raw Internet transport.",
+      "searchTerms": [
+        "billow://",
+        "URL",
+        "URI"
+      ],
+      "verification": [
+        {
+          "kind": "architecture-contract",
+          "id": "Billow.Web.BillowUri"
+        }
+      ],
+      "docs": "docs/reference/URI_SCHEMES.md",
+      "upstream": "uri-rfc3986"
+    },
+    {
+      "id": "billow.forms.service-binding",
+      "area": "billow",
+      "kind": "extension",
+      "external": "form submission",
+      "billow": "data-billow-service + data-billow-action",
+      "status": "billow_extension",
+      "summary": "Forms can bind declaratively to an approved Billow service/action.",
+      "restrictions": "Current profile uses validated identifiers and POST.",
+      "searchTerms": [
+        "form submit",
+        "data-billow-service",
+        "data-billow-action"
+      ],
+      "verification": [
+        {
+          "kind": "implementation-contract",
+          "id": "HTML.PolicyV2.BillowServiceForm"
+        }
+      ],
+      "docs": "docs/web/HTML.md",
+      "upstream": "mdn-forms"
+    },
+    {
+      "id": "app.module.app",
+      "area": "application-api",
+      "kind": "billow-module",
+      "external": null,
+      "billow": "@billow/app",
+      "status": "billow_extension",
+      "summary": "@billow/app exposes application lifecycle/activation.",
+      "restrictions": "Capability-backed facade; module possession does not grant raw Roblox authority.",
+      "searchTerms": [
+        "@billow/app",
+        "app",
+        "application lifecycle/activation"
+      ],
+      "verification": [
+        {
+          "kind": "conformance-test",
+          "id": "DLP7ApplicationFacadeSelfTest"
+        }
+      ],
+      "docs": "docs/applications/README.md",
+      "upstream": null
+    },
+    {
+      "id": "app.module.windows",
+      "area": "application-api",
+      "kind": "billow-module",
+      "external": null,
+      "billow": "@billow/windows",
+      "status": "billow_extension",
+      "summary": "@billow/windows exposes window operations.",
+      "restrictions": "Capability-backed facade; module possession does not grant raw Roblox authority.",
+      "searchTerms": [
+        "@billow/windows",
+        "windows",
+        "window operations"
+      ],
+      "verification": [
+        {
+          "kind": "conformance-test",
+          "id": "DLP7ApplicationFacadeSelfTest"
+        }
+      ],
+      "docs": "docs/applications/README.md",
+      "upstream": null
+    },
+    {
+      "id": "app.module.files",
+      "area": "application-api",
+      "kind": "billow-module",
+      "external": null,
+      "billow": "@billow/files",
+      "status": "billow_extension",
+      "summary": "@billow/files exposes opaque file-handle operations.",
+      "restrictions": "Capability-backed facade; module possession does not grant raw Roblox authority.",
+      "searchTerms": [
+        "@billow/files",
+        "files",
+        "opaque file-handle operations"
+      ],
+      "verification": [
+        {
+          "kind": "conformance-test",
+          "id": "DLP7ApplicationFacadeSelfTest"
+        }
+      ],
+      "docs": "docs/applications/README.md",
+      "upstream": null
+    },
+    {
+      "id": "app.module.storage",
+      "area": "application-api",
+      "kind": "billow-module",
+      "external": null,
+      "billow": "@billow/storage",
+      "status": "billow_extension",
+      "summary": "@billow/storage exposes application-scoped storage.",
+      "restrictions": "Capability-backed facade; module possession does not grant raw Roblox authority.",
+      "searchTerms": [
+        "@billow/storage",
+        "storage",
+        "application-scoped storage"
+      ],
+      "verification": [
+        {
+          "kind": "conformance-test",
+          "id": "DLP7ApplicationFacadeSelfTest"
+        }
+      ],
+      "docs": "docs/applications/README.md",
+      "upstream": null
+    },
+    {
+      "id": "app.module.ipc",
+      "area": "application-api",
+      "kind": "billow-module",
+      "external": null,
+      "billow": "@billow/ipc",
+      "status": "billow_extension",
+      "summary": "@billow/ipc exposes capability-mediated IPC.",
+      "restrictions": "Capability-backed facade; module possession does not grant raw Roblox authority.",
+      "searchTerms": [
+        "@billow/ipc",
+        "ipc",
+        "capability-mediated IPC"
+      ],
+      "verification": [
+        {
+          "kind": "conformance-test",
+          "id": "DLP7ApplicationFacadeSelfTest"
+        }
+      ],
+      "docs": "docs/applications/README.md",
+      "upstream": null
+    },
+    {
+      "id": "app.module.notifications",
+      "area": "application-api",
+      "kind": "billow-module",
+      "external": null,
+      "billow": "@billow/notifications",
+      "status": "billow_extension",
+      "summary": "@billow/notifications exposes notifications.",
+      "restrictions": "Capability-backed facade; module possession does not grant raw Roblox authority.",
+      "searchTerms": [
+        "@billow/notifications",
+        "notifications",
+        "notifications"
+      ],
+      "verification": [
+        {
+          "kind": "conformance-test",
+          "id": "DLP7ApplicationFacadeSelfTest"
+        }
+      ],
+      "docs": "docs/applications/README.md",
+      "upstream": null
+    },
+    {
+      "id": "app.module.clipboard",
+      "area": "application-api",
+      "kind": "billow-module",
+      "external": null,
+      "billow": "@billow/clipboard",
+      "status": "billow_extension",
+      "summary": "@billow/clipboard exposes permission-scoped clipboard.",
+      "restrictions": "Capability-backed facade; module possession does not grant raw Roblox authority.",
+      "searchTerms": [
+        "@billow/clipboard",
+        "clipboard",
+        "permission-scoped clipboard"
+      ],
+      "verification": [
+        {
+          "kind": "conformance-test",
+          "id": "DLP7ApplicationFacadeSelfTest"
+        }
+      ],
+      "docs": "docs/applications/README.md",
+      "upstream": null
+    },
+    {
+      "id": "app.module.logging",
+      "area": "application-api",
+      "kind": "billow-module",
+      "external": null,
+      "billow": "@billow/logging",
+      "status": "billow_extension",
+      "summary": "@billow/logging exposes application logging.",
+      "restrictions": "Capability-backed facade; module possession does not grant raw Roblox authority.",
+      "searchTerms": [
+        "@billow/logging",
+        "logging",
+        "application logging"
+      ],
+      "verification": [
+        {
+          "kind": "conformance-test",
+          "id": "DLP7ApplicationFacadeSelfTest"
+        }
+      ],
+      "docs": "docs/applications/README.md",
+      "upstream": null
+    }
+  ]
+}
