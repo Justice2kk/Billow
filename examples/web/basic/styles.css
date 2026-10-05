@@ -1,0 +1,23 @@
+body {
+  margin: 0;
+  padding: 24px;
+  background-color: #f3f3f3;
+  color: #111111;
+  font-family: system-ui;
+}
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: white;
+  border: 1px solid #cccccc;
+  border-radius: 12px;
+}
+button:hover { opacity: 0.85; }
+@media (max-width: 520px) {
+  body { padding: 12px; }
+  .card { padding: 14px; }
+}
