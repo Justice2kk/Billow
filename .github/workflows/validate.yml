@@ -1,0 +1,22 @@
+name: Validate public developer surface
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  public-contract:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - name: Compile validator
+        run: python -m compileall -q tools
+      - name: Validate public tree
+        run: python tools/validate_public.py --check
