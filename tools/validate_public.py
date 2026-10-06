@@ -9,11 +9,15 @@ ROOT=Path(__file__).resolve().parents[1]
 REGISTRY=ROOT/"compatibility"/"registry.json"
 STATUSES={"supported","supported_with_limits","experimental","unsupported","intentionally_unsupported","billow_extension","deprecated","planned"}
 NEEDS_PROOF={"supported","supported_with_limits","experimental","billow_extension"}
+EVIDENCE_KINDS={"implementation-contract","conformance-test","project-gate","architecture-contract"}
 FORBIDDEN=("GameServices/","LanguageMigration/","CURRENT_FRONTIER.md","PROJECT_STATE.json","BILLOW_CODEX_CHECKPOINT.md","CHATGPT_CHAT_HANDOFF.md","C:\\Work\\Billow")
 LINK_RE=re.compile(r"(?<!!)\\[[^\\]]*\\]\\(([^)]+)\\)")
 
 def load():
     return json.loads(REGISTRY.read_text(encoding="utf-8"))
+
+def cell(value):
+    return str(value or "—").replace("|","\\|").replace("\n"," ")
 
 def render(d):
     out=[
@@ -24,16 +28,20 @@ def render(d):
     ]
     for k,v in d["statusDefinitions"].items():
         out.append(f"- **`{k}`** — {v}")
+    out += ["","## Evidence catalog","",
+      "Evidence IDs are stable public references to the implementation contract, executable conformance gate, project gate, or architecture contract behind a compatibility claim. They do not expose private repository paths.","",
+      "| Evidence ID | Kind | Source | What it proves |",
+      "|---|---|---|---|"]
+    for ident,e in sorted(d["evidenceCatalog"].items()):
+        out.append(f"| `{cell(ident)}` | `{cell(e['kind'])}` | `{cell(e['source'])}` | {cell(e['description'])} |")
     areas={}
     for f in d["features"]:
         areas.setdefault(f["area"],[]).append(f)
     for area in sorted(areas):
-        out += ["",f"## {area}","","| External / known term | Billow | Status | Notes |","|---|---|---|---|"]
+        out += ["",f"## {area}","","| External / known term | Billow | Status | Evidence | Notes |","|---|---|---|---|---|"]
         for f in sorted(areas[area],key=lambda x:x["id"]):
-            ext=(f.get("external") or "—").replace("|","\\|")
-            billow=(f.get("billow") or "—").replace("|","\\|")
-            note=(f.get("summary") or "").replace("|","\\|").replace("\n"," ")
-            out.append(f"| `{ext}` | `{billow}` | `{f['status']}` | {note} |")
+            evidence=", ".join(f"`{v['id']}`" for v in f.get("verification") or []) or "—"
+            out.append(f"| `{cell(f.get('external'))}` | `{cell(f.get('billow'))}` | `{f['status']}` | {evidence} | {cell(f.get('summary'))} |")
     out += ["","## Learning resources",""]
     for k,r in sorted(d.get("resources",{}).items()):
         out.append(f"- **{r['label']}** — {r['url']} (`{k}`)")
@@ -46,7 +54,26 @@ def registry_errors(d):
     for k,r in resources.items():
         if not isinstance(r,dict) or not str(r.get("url","")).startswith("https://"):
             errors.append(f"resource {k!r} must have an https URL")
+
+    evidence=d.get("evidenceCatalog")
+    if not isinstance(evidence,dict) or not evidence:
+        errors.append("registry requires a non-empty evidenceCatalog")
+        evidence={}
+    for ident,e in evidence.items():
+        if not isinstance(ident,str) or not re.fullmatch(r"[a-z0-9][a-z0-9-]*",ident):
+            errors.append(f"invalid evidence id: {ident!r}")
+            continue
+        if not isinstance(e,dict):
+            errors.append(f"evidence {ident!r} must be an object")
+            continue
+        if e.get("kind") not in EVIDENCE_KINDS:
+            errors.append(f"evidence {ident!r}: invalid kind {e.get('kind')!r}")
+        for field in ("label","source","description"):
+            if not isinstance(e.get(field),str) or not e[field].strip():
+                errors.append(f"evidence {ident!r}: missing {field}")
+
     seen=set()
+    referenced=set()
     for i,f in enumerate(d.get("features") or []):
         ident=f.get("id")
         if not isinstance(ident,str) or not ident:
@@ -55,8 +82,28 @@ def registry_errors(d):
         seen.add(ident)
         status=f.get("status")
         if status not in STATUSES: errors.append(f"{ident}: invalid status {status!r}")
-        if status in NEEDS_PROOF and not f.get("verification"):
+
+        verification=f.get("verification")
+        if status in NEEDS_PROOF and not verification:
             errors.append(f"{ident}: {status} requires verification")
+        if verification is not None:
+            if not isinstance(verification,list):
+                errors.append(f"{ident}: verification must be a list")
+            else:
+                for j,ref in enumerate(verification):
+                    if not isinstance(ref,dict):
+                        errors.append(f"{ident}: verification[{j}] must be an object")
+                        continue
+                    evidence_id=ref.get("id")
+                    kind=ref.get("kind")
+                    if evidence_id not in evidence:
+                        errors.append(f"{ident}: unknown evidence id {evidence_id!r}")
+                        continue
+                    referenced.add(evidence_id)
+                    expected=evidence[evidence_id].get("kind")
+                    if kind!=expected:
+                        errors.append(f"{ident}: evidence {evidence_id!r} kind {kind!r} does not match catalog kind {expected!r}")
+
         docs=f.get("docs")
         if not isinstance(docs,str) or not (ROOT/docs).is_file():
             errors.append(f"{ident}: missing docs path {docs!r}")
@@ -65,6 +112,9 @@ def registry_errors(d):
             errors.append(f"{ident}: unknown upstream resource {upstream!r}")
         if status=="intentionally_unsupported" and f.get("billow") not in (None,""):
             errors.append(f"{ident}: intentionally unsupported entry advertises a Billow equivalent")
+
+    for evidence_id in sorted(set(evidence)-referenced):
+        errors.append(f"evidence catalog entry is unreferenced: {evidence_id}")
     return errors
 
 def link_errors():
@@ -85,7 +135,7 @@ def link_errors():
 def boundary_errors():
     errors=[]
     for path in sorted([*ROOT.rglob("*.md"),*ROOT.rglob("*.json")]):
-        if ".git" in path.parts or path==REGISTRY: continue
+        if ".git" in path.parts: continue
         text=path.read_text(encoding="utf-8")
         for marker in FORBIDDEN:
             if marker in text: errors.append(f"{path.relative_to(ROOT)} leaks private-repository reference {marker!r}")
@@ -114,7 +164,7 @@ def main():
         print("Billow public validation: RED")
         for e in errors: print("ERROR:",e)
         return 1
-    print(f"Billow public validation: GREEN ({len(d['features'])} compatibility entries, registry {digest})")
+    print(f"Billow public validation: GREEN ({len(d['features'])} compatibility entries, {len(d['evidenceCatalog'])} evidence gates, registry {digest})")
     return 0
 
 if __name__=="__main__":
